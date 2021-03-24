@@ -1,0 +1,14 @@
+{
+  "name": "exe",
+  "version": "1.0.0",
+  "description": "oh my food",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./public/css/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}

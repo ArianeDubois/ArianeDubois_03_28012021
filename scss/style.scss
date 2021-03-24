@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+// fonts//
+
+@mixin title-logo {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin text-standard ($weight) {
+    font-size: 1.1em;
+    font-weight: $weight;
+}
+
+@mixin title-section {
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+@mixin text-subtitle {
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+
+@mixin box-shadow ($color) {
+    box-shadow: 0 15px 25px -1.4em $color;
+}
+
+// modules html//
+
+.title-section {
+    @include title-section();
+}
+
+
+
+.text-subtitle {
+    @include text-subtitle();
+}
+
+
+// color//
+$first-color: #9356DC;
+$second-color: #FF79DA;
+$thurd-color: #99E2D0;
+$grey-section: lighten(grey, 46%);
+
+
+$grey-shadow: #9e9d9d;
+
+
+
+// header//
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    // y , x, blur, spread//
+    position: relative;
+    z-index: 1;
+    @include box-shadow($grey-shadow);
+
+    .header_logo {
+        text-align: center;
+        @include title-logo;
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+}
+
+// discovery//
+.discovery {
+    background-color: $grey-section;
+    text-align: center;
+    padding-bottom: 50px;
+
+    &_form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        z-index: 0;
+        background-color: darken($grey-section, 5%);
+
+
+        &_text {
+            border: none;
+            background-color: none;
+            background-color: darken($grey-section, 5%);
+        }
+
+        i {
+            font-size: 1.2em;
+            margin-right: 15px;
+        }
+    }
+
+}
+
+
+.discovery_button {
+    font-size: 1em;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 2em;
+    background: linear-gradient($second-color, lighten($first-color, 5%));
+    @include box-shadow(black);
+
+}
+
+// Function //
+
+.functioning {
+
+
+    &_card {
+        background-color: $grey-section;
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        padding: 15px;
+        border-radius: 1.5em;
+        margin: 20px;
+        position: relative;
+        @include box-shadow($grey-shadow);
+
+
+        &_text {
+            @include text-standard(500);
+        }
+
+        &_number {
+            border-radius: 2em;
+            padding: 5px 10px 5px 10px;
+            background-color: $first-color;
+            position: absolute;
+            left: -15px;
+            color: white;
+            font-size: 0.9em
+        }
+
+        &_icone {
+            margin: 0 20px 0 20px;
+            color: lighten(black, 40%);
+            font-size: 1.4em;
+        }
+
+    }
+}
+
+
+.restaurants {
+
+    background-color: $grey-section;
+    padding: 30px 5px 30px 5px;
+
+    &_card {
+        max-width: 90%;
+        height: 70vw;
+        object-fit: contain;
+        border-radius: 1em;
+        margin: 20px;
+        position: relative;
+        @include box-shadow($grey-shadow);
+
+        &--reframe img {
+            max-height: 260px;
+            width: auto;
+            object-position: 0 -170px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 1em;
+            height: auto;
+            object-fit: cover;
+        }
+}
+
+}
+
+
+.restaurants_card_footer {
+
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    border-radius: 0 0 1em 1em;
+    width: 100%;
+
+
+
+    h3 {
+        padding:0 15px 0 15px;
+        display: flex;
+justify-content: space-between;
+@include text-standard(700);
+    }
+  p{
+    padding-left:15px;
+    @include text-standard(100);
+  }
+
+}
+
+.footer {
+  padding: 20px;
+    background-color: lighten(black, 20%);
+    color: darken(white, 10%); 
+
+&_logo{
+    @include title-logo();
+}
+
+&_text {
+    @include text-standard(400);
+    color: darken(white, 10%); 
+
+
+    &_icones{
+        padding-right: 10px; 
+    }
+}
+    }
+       
+
+
+
