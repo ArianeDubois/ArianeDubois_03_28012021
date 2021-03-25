@@ -1,0 +1,148 @@
+// discovery//
+.discovery {
+    background-color: $grey-section;
+    text-align: center;
+    padding-bottom: 50px;
+
+    &_form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        z-index: 0;
+        background-color: darken($grey-section, 5%);
+
+        &_text {
+            text-align: center;
+            border: none;
+            max-width: $card-width;
+            background-color: darken($grey-section, 5%);
+            @include text-standard(100);
+
+            &:focus{
+             outline: none;
+            }
+
+            &::placeholder{
+                color: black;
+            }
+        }
+     
+        i {
+            font-size: 1.2em;
+        }
+    }
+
+}
+
+
+.discovery_button {
+    font-size: 1em;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 2em;
+    background: linear-gradient($second-color, lighten($first-color, 5%));
+    @include box-shadow(black);
+
+}
+
+// Function //
+
+.functioning {
+
+    padding-left: 10px;
+
+    &_card {
+        background-color: $grey-section;
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        padding: $pad-section;
+        border-radius: 1.5em;
+        margin: 20px;
+        position: relative;
+        @include box-shadow($grey-shadow);
+
+
+        &_text {
+            @include text-standard(500);
+        }
+
+        &_number {
+            border-radius: 2em;
+            padding: 5px 10px 5px 10px;
+            background-color: $first-color;
+            position: absolute;
+            left: -15px;
+            color: white;
+            font-size: 0.9em
+        }
+
+        &_icone {
+            margin: 0 20px 0 20px;
+            color: lighten(black, 40%);
+            font-size: 1.4em;
+        }
+
+    }
+}
+
+
+.restaurants {
+
+    background-color: $grey-section;
+    padding: 30px 5px 30px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &_card {
+        max-width: 100%;
+        max-height: 70vw;
+        object-fit: contain;
+        border-radius: 1em;
+        margin: 20px ;
+        position: relative;
+        @include box-shadow($grey-shadow);
+
+        &--reframe img {
+            max-height: 60vw;
+            width: auto;
+            object-position: 0 -170px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 1em;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+}
+
+.restaurants_card_footer {
+height: 30%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    border-radius: 0 0 1em 1em;
+    width: 100%;
+    overflow: hidden;
+
+    h3 {
+        padding: 0 15px 0 15px;
+        margin: 5% 0 0.3em  0;
+        display: flex;
+        justify-content: space-between;
+        @include text-standard(700);
+    }
+
+    p {
+        padding-left: 15px;
+        margin: 0 0 5% 0;
+        @include text-standard(100);
+    }
+
+}

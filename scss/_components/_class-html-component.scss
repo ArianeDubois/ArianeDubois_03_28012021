@@ -1,0 +1,21 @@
+// modules html//
+
+.title-section {
+    @include title-section;
+    padding-left: 20px;
+}
+
+.text-subtitle {
+    @include text-subtitle(100);
+}
+
+.button {
+    font-size: 1em;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 2em;
+    background: linear-gradient($second-color, lighten($first-color, 5%));
+    @include box-shadow(black);
+
+}

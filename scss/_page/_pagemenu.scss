@@ -1,0 +1,76 @@
+.return_icone {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 0.7em;
+}
+
+.menu {
+    background-color: $grey-section;
+    border-radius: 3em 3em 0 0;
+    padding: $pad-section;
+    position: relative;
+    top: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &_name {
+        @include font-logo;
+        @include title-section;
+        display: flex;
+        padding-right: 20px;
+        justify-content: space-between;
+    }
+
+    &_subtitle {
+        @include text-subtitle(100);
+        border-bottom: 3px solid $thurd-color;
+        width: 40px;
+        text-transform: uppercase;    }
+
+    .button {
+        margin: 30px auto 0 auto;
+        padding: 18px 50px 18px 50px;
+    }
+
+}
+
+.menu_card {
+    background-color: white;
+    border-radius: 1.5em;
+    @include box-shadow ($grey-shadow);
+    padding: 0 15px 5px 15px;
+    margin: 10px 0 10px 0;
+    height: 100px;
+
+    &_text {
+        @include text-subtitle(400);
+        margin-bottom: 0;
+    }
+
+    p {
+        @include text-standard(100);
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        z-index: 0;
+
+
+        em {
+            @include text-standard(400);
+            font-style: normal;
+            background-color: white;
+            padding-left: 20px;
+            z-index: 1;
+        }
+    }
+
+
+
+}
+
+main {
+    background-color: $grey-section;
+
+}

@@ -1,3 +1,35 @@
+.img_background_1 {
+  background-image: url("../images/restaurants/la-palette-du-gout-4402.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  z-index: 0;
+}
+
+.img_background_2 {
+  background-image: url("../images/restaurants/la-note-enchantee-3024.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  z-index: 0;
+}
+
+.img_background_3 {
+  background-image: url("../images/restaurants/a-la-francaise-3936.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  z-index: 0;
+}
+
+.img_background_4 {
+  background-image: url("../images/restaurants/le-delice-des-sens-3641.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  z-index: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,12 +43,24 @@ a {
 
 .title-section {
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 1.7em;
+  padding-left: 20px;
 }
 
 .text-subtitle {
   font-size: 1.3em;
   font-weight: 100;
+  line-height: 1.6em;
+}
+
+.button {
+  font-size: 1em;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 2em;
+  background: linear-gradient(#FF79DA, #a16be0);
+  box-shadow: 0 15px 25px -1.4em black;
 }
 
 .header {
@@ -47,13 +91,21 @@ a {
   background-color: #e9e9e9;
 }
 .discovery_form_text {
+  text-align: center;
   border: none;
-  background-color: none;
+  max-width: 150px;
   background-color: #e9e9e9;
+  font-size: 1.1em;
+  font-weight: 100;
+}
+.discovery_form_text:focus {
+  outline: none;
+}
+.discovery_form_text::placeholder {
+  color: black;
 }
 .discovery_form i {
   font-size: 1.2em;
-  margin-right: 15px;
 }
 
 .discovery_button {
@@ -66,6 +118,9 @@ a {
   box-shadow: 0 15px 25px -1.4em black;
 }
 
+.functioning {
+  padding-left: 10px;
+}
 .functioning_card {
   background-color: whitesmoke;
   display: flex;
@@ -99,10 +154,13 @@ a {
 .restaurants {
   background-color: whitesmoke;
   padding: 30px 5px 30px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .restaurants_card {
-  max-width: 90%;
-  height: 70vw;
+  max-width: 100%;
+  max-height: 70vw;
   object-fit: contain;
   border-radius: 1em;
   margin: 20px;
@@ -110,7 +168,7 @@ a {
   box-shadow: 0 15px 25px -1.4em #9e9d9d;
 }
 .restaurants_card--reframe img {
-  max-height: 260px;
+  max-height: 60vw;
   width: auto;
   object-position: 0 -170px;
 }
@@ -122,14 +180,17 @@ a {
 }
 
 .restaurants_card_footer {
+  height: 30%;
   position: absolute;
   bottom: 0;
   background-color: white;
   border-radius: 0 0 1em 1em;
   width: 100%;
+  overflow: hidden;
 }
 .restaurants_card_footer h3 {
   padding: 0 15px 0 15px;
+  margin: 5% 0 0.3em 0;
   display: flex;
   justify-content: space-between;
   font-size: 1.1em;
@@ -137,8 +198,82 @@ a {
 }
 .restaurants_card_footer p {
   padding-left: 15px;
+  margin: 0 0 5% 0;
   font-size: 1.1em;
   font-weight: 100;
+}
+
+.return_icone {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 0.7em;
+}
+
+.menu {
+  background-color: whitesmoke;
+  border-radius: 3em 3em 0 0;
+  padding: 15px;
+  position: relative;
+  top: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu_name {
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+  font-size: 1.7em;
+  display: flex;
+  padding-right: 20px;
+  justify-content: space-between;
+}
+.menu_subtitle {
+  font-size: 1.3em;
+  font-weight: 100;
+  line-height: 1.6em;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  text-transform: uppercase;
+}
+.menu .button {
+  margin: 30px auto 0 auto;
+  padding: 18px 50px 18px 50px;
+}
+
+.menu_card {
+  background-color: white;
+  border-radius: 1.5em;
+  box-shadow: 0 15px 25px -1.4em #9e9d9d;
+  padding: 0 15px 5px 15px;
+  margin: 10px 0 10px 0;
+  height: 100px;
+}
+.menu_card_text {
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin-bottom: 0;
+}
+.menu_card p {
+  font-size: 1.1em;
+  font-weight: 100;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 0;
+}
+.menu_card p em {
+  font-size: 1.1em;
+  font-weight: 400;
+  font-style: normal;
+  background-color: white;
+  padding-left: 20px;
+  z-index: 1;
+}
+
+main {
+  background-color: whitesmoke;
 }
 
 .footer {

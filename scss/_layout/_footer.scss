@@ -1,0 +1,21 @@
+
+
+.footer {
+    padding: 20px;
+    background-color: lighten(black, 20%);
+    color: darken(white, 10%);
+ 
+
+    &_logo {
+        @include font-logo();
+    }
+
+    &_text {
+        @include text-standard(400);
+        color: darken(white, 10%);
+
+        &_icones {
+            padding-right: 10px;
+        }
+    }
+}

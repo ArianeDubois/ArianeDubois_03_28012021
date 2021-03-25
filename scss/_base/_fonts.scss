@@ -1,0 +1,21 @@
+// fonts//
+
+@mixin font-logo {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin text-standard ($weight) {
+    font-size: 1.1em;
+    font-weight: $weight;
+}
+
+@mixin title-section {
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+@mixin text-subtitle ($weight) {
+    font-size: 1.3em;
+    font-weight: $weight;
+    line-height: 1.6em;
+}
