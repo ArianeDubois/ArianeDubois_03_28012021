@@ -2,14 +2,15 @@
 .discovery {
     background-color: $grey-section;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: $pad-end-section;
+  
 
     &_form {
+
         display: flex;
         justify-content: center;
-        align-items: center;
-        padding: 20px;
-        z-index: 0;
+        align-items: baseline;
+       padding: $pad-container-text;
         background-color: darken($grey-section, 5%);
 
         &_text {
@@ -18,7 +19,10 @@
             max-width: $card-width;
             background-color: darken($grey-section, 5%);
             @include text-standard(100);
-
+            @include mobile-only {
+                // regler la visibilité de la barre de recherhcz//
+          margin-top: 70px;
+      }
             &:focus{
              outline: none;
             }
@@ -27,44 +31,31 @@
                 color: black;
             }
         }
-     
         i {
-            font-size: 1.2em;
+       @include text-standard(0);
         }
     }
-
-}
-
-
-.discovery_button {
-    font-size: 1em;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 2em;
-    background: linear-gradient($second-color, lighten($first-color, 5%));
-    @include box-shadow(black);
-
 }
 
 // Function //
 
 .functioning {
 
-    padding-left: 10px;
+    @include space-section;
 
     &_card {
         background-color: $grey-section;
-        display: flex;
-        justify-content: flex-start;
-        align-content: flex-start;
-        padding: $pad-section;
+        padding: $pad-container-text;
         border-radius: 1.5em;
-        margin: 20px;
+       margin: $min-general-margin $general-margin $min-general-margin 30px ;
         position: relative;
+    
         @include box-shadow($grey-shadow);
 
-
+        @include mobile-only {
+            width: 25vw; 
+        }
+        
         &_text {
             @include text-standard(500);
         }
@@ -88,27 +79,27 @@
     }
 }
 
-
 .restaurants {
 
+@include space-section;
     background-color: $grey-section;
-    padding: 30px 5px 30px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
     &_card {
-        max-width: 100%;
-        max-height: 70vw;
+        margin: $min-general-margin $general-margin $min-general-margin $general-margin;
+        height: 60vmin;
         object-fit: contain;
         border-radius: 1em;
-        margin: 20px ;
+    
         position: relative;
+        overflow: hidden;
+
         @include box-shadow($grey-shadow);
+        @include mobile-only {
+            //flex-wrap ne prend pas en charge les poucentages 
+            width: 40vw; 
+            height: 25vw;
+        }
 
         &--reframe img {
-            max-height: 60vw;
-            width: auto;
             object-position: 0 -170px;
         }
 

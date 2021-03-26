@@ -5,10 +5,19 @@
     font-size: 0.7em;
 }
 
+
+.container_menu{
+
+    @include mobile-only {
+  display: flex;
+  justify-content: space-around;
+    }
+
+}
 .menu {
     background-color: $grey-section;
     border-radius: 3em 3em 0 0;
-    padding: $pad-section;
+    padding: $min-general-margin;
     position: relative;
     top: -50px;
     display: flex;
@@ -19,7 +28,6 @@
         @include font-logo;
         @include title-section;
         display: flex;
-        padding-right: 20px;
         justify-content: space-between;
     }
 
@@ -27,7 +35,12 @@
         @include text-subtitle(100);
         border-bottom: 3px solid $thurd-color;
         width: 40px;
-        text-transform: uppercase;    }
+        padding-top: $pad-top-section;
+        text-transform: uppercase; 
+        @include mobile-only {
+        margin-left: 20px;
+              }   
+    }
 
     .button {
         margin: 30px auto 0 auto;
@@ -40,18 +53,28 @@
     background-color: white;
     border-radius: 1.5em;
     @include box-shadow ($grey-shadow);
-    padding: 0 15px 5px 15px;
-    margin: 10px 0 10px 0;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:  0 $min-general-margin 0 $min-general-margin;
+    margin: $general-margin 0 $general-margin 0;
+    height: 90px;
 
+    @include mobile-only {
+        margin: 20px;
+        width: 28vw;
+    }
+    
     &_text {
         @include text-subtitle(400);
-        margin-bottom: 0;
+        margin: 0;
+
+
     }
 
     p {
         @include text-standard(100);
-        margin-top: 0;
+        margin: 0;
         display: flex;
         justify-content: space-between;
         z-index: 0;
@@ -65,9 +88,6 @@
             z-index: 1;
         }
     }
-
-
-
 }
 
 main {

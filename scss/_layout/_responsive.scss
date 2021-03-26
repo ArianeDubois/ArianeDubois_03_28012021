@@ -1,0 +1,13 @@
+$breakpoints: 599px;
+
+
+
+// mixin avec les propriétées responsive, après tu mets un include dans les sections
+// ---> @include mobile-only { le contenu du responsive}
+
+ @mixin mobile-only{
+    @media (min-width: 900px) { @content; }
+}
+
+
+
