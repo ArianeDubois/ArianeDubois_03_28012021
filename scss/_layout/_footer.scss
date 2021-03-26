@@ -4,7 +4,7 @@
     padding: 20px;
     background-color: lighten(black, 20%);
     color: darken(white, 10%);
- 
+
 
     &_logo {
         @include font-logo();

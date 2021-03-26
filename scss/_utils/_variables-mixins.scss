@@ -3,49 +3,48 @@ $first-color: #9356DC;
 $second-color: #FF79DA;
 $thurd-color: #99E2D0;
 $grey-section: lighten(grey, 46%);
-
 $grey-shadow: #9e9d9d;
 
 // space//
+$pad-top-section: 30px;
+$pad-end-section: 50px;
 
-$pad-section: 15px;
-// size//
+$pad-container-text: 12px;
+$general-margin: 5vmin;
+$min-general-margin: 4vmin;
 
-$card-width: 150px;
-@mixin box-shadow ($color) {
-    box-shadow: 0 15px 25px -1.4em $color;
+
+
+//layout
+@mixin space-section{
+    padding: $pad-top-section 0 $pad-end-section 0 ;
 }
 
+@mixin box-shadow ($color) {
+    box-shadow: 5px 5px 30px -0.8em $color;
+}
+
+// size//
+$card-width: 150px;
+
+
+
 // images path
-$images-restau: (
-                 img-1: url("../images/restaurants/la-palette-du-gout-4402.jpg"),
-                 img-2: url("../images/restaurants/la-note-enchantee-3024.jpg"),
-                 img-3: url("../images/restaurants/a-la-francaise-3936.jpg"),
-                 img-4: url("../images/restaurants/le-delice-des-sens-3641.jpg")
-                  ); 
+$images-restau: (img-1: url("../images/restaurants/la-palette-du-gout-4402.jpg"),
+    img-2: url("../images/restaurants/la-note-enchantee-3024.jpg"),
+    img-3: url("../images/restaurants/a-la-francaise-3936.jpg"),
+    img-4: url("../images/restaurants/le-delice-des-sens-3641.jpg"));
 
- // $number reprend l'ordre dans la map 
+// générateur de classe pour les url images background
+//voir si tu peux pas faire une extend 
 
-
-
- // générateur de class pour les url images background
-
-    @for $i from 1 through 4 {
-        .img_background_#{$i} {
-     background-image: map-get($images-restau, img-#{$i});
-     background-repeat: no-repeat;
+@for $i from 1 through 4 {
+    .img_background_#{$i} {
+        background-image: map-get($images-restau, img-#{$i});
+        background-repeat: no-repeat;
         background-size: cover;
-        height:300px;
+        height: 36vmax;
         z-index: 0;
-            
-        }
+
     }
-
-
-    //@for $i from 1 through 4 {
-      //  .img_background_#{$i} {
-       //     @include background-img($i);
-      //  }
-  //  }
-
-
+}

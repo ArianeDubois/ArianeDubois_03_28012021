@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "sass": "^1.32.8"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArianeDubois/ArianeDubois_03_28012021.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArianeDubois/ArianeDubois_03_28012021/issues"
+  },
+  "homepage": "https://github.com/ArianeDubois/ArianeDubois_03_28012021#readme"
 }

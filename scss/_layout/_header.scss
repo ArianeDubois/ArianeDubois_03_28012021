@@ -5,14 +5,31 @@
     justify-content: space-around;
     // y , x, blur, spread//
     position: relative;
-    z-index: 1;
-    @include box-shadow($grey-shadow);
+    z-index: 2;
+
+    box-shadow: 0 15px 25px -1.4em $grey-shadow;
+    @include mobile-only {
+
+        // ! on ne retrouve plus la barre du dessous du coup//
+
+        position: fixed;
+        background-color: white;
+        width:100%;
+
+
+   
+
+    }
+
 
     .header_logo {
         text-align: center;
         @include font-logo;
         font-size: 2em;
         margin-bottom: 0;
-    }
+
 }
+    }
+
+
 

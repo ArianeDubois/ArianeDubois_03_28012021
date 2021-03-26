@@ -8,12 +8,12 @@
     <meta name="description" content="Ohmyfood est une entreprise de commande de repas en ligne. 
     Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants car leur menu est préparé à l’avance. 
     Plus de perte de temps à consulter la carte" />
-            <!-- on charge css ou scss ? -->
+    <!-- on charge css ou scss ? -->
 
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="images/logo/ohmyfood.png" />
 
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <header class="header" >
+    <header class="header">
         <!-- attention à la taille du logo -->
         <h1 class="header_logo">ohmyfood</h1>
     </header>
@@ -33,15 +33,15 @@
         <!-- necessité de mettre le form? -->
         <form method="POST" class="discovery_form">
             <i class="fas fa-map-marker-alt"></i>
-            <input type="text" class="discovery_form_text" name="location" placeholder=" Paris, Belleville" >
+            <input type="text" class="discovery_form_text" name="location" placeholder=" Paris, Belleville">
         </form>
-            <h2 class="title-section"> Réservez le menu qui convient</h2>
-            <p class="text-subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+        <h2 class="title-section"> Réservez le menu qui convient</h2>
+        <p class="text-subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
 
-            <button class="button">
-                Explorer nos restaurants
-            </button>
-    
+        <button class="button">
+            Explorer nos restaurants
+        </button>
+
 
     </section>
     <!-- end of section DISCOVERY -->
@@ -49,37 +49,34 @@
     <!-- section FUNCTIONING -->
     <section class="functioning">
         <h2 class="title-section">Fonctionnement</h2>
-        <!--ce sont des renvois ? -->
-        <article class="functioning_card">
 
-            <a href="">
-                <h3 class="functioning_card_text "><span class="functioning_card_number">1</span> <span class="functioning_card_icone"><i
-                            class="fas fa-mobile-alt"></i></span> Choisissez un
+        <div class="container">
+            <article class="functioning_card">
+
+                <h3 class="functioning_card_text "><span class="functioning_card_number">1</span> <span
+                        class="functioning_card_icone"><i class="fas fa-mobile-alt"></i></span> Choisissez un
                     restaurant</h3>
-            </a>
 
-        </article>
+            </article>
 
-        <article class="functioning_card">
+            <article class="functioning_card">
 
-            <a href="">
-                <h3 class="functioning_card_text" ><span class="functioning_card_number">2</span> <span class="functioning_card_icone"><i
-                            class="fas fa-list-ul"></i></span>Composez votre menu
+                <h3 class="functioning_card_text"><span class="functioning_card_number">2</span> <span
+                        class="functioning_card_icone"><i class="fas fa-list-ul"></i></span>Composez votre menu
+
+                    </a>
+
+            </article>
+
+            <article class="functioning_card">
+
+
+                <h3 class="functioning_card_text"><span class="functioning_card_number">3</span> <span
+                        class="functioning_card_icone"><i class="fas fa-store"></i></span> Dégustez au restaurant
                 </h3>
-            </a>
 
-        </article>
-
-        <article class="functioning_card">
-
-            <a href="">
-                <h3 class="functioning_card_text" ><span class="functioning_card_number">3</span> <span class="functioning_card_icone"><i
-                            class="fas fa-store"></i></span> Dégustez au restaurant
-                </h3>
-            </a>
-
-        </article>
-
+            </article>
+        </div>
 
     </section>
 
@@ -88,52 +85,56 @@
     <!-- section RESTAURANTS -->
     <section class="restaurants">
         <h2 class="title-section">Restaurants</h2>
-        
-<a href="page2.html">
-        <article class="restaurants_card"><img src="images/restaurants/la-palette-du-gout-4402.jpg"
-                alt="dressage assiette poisson et salade verte">
-            <div class="restaurants_card_footer">
-                <h3>La palette du goût <span class="restaurants_card_footer_icone"><i class="far fa-heart"></i></span></h3>
-                   <p> Ménilmontant</p>
-               
-            </div>
-        </article>
-    </a>
+        <div class="container">
+            <a href="page2.html">
+                <article class="restaurants_card"><img src="images/restaurants/la-palette-du-gout-4402.jpg"
+                        alt="dressage assiette poisson et salade verte">
+                    <div class="restaurants_card_footer">
+                        <h3>La palette du goût <span class="restaurants_card_footer_icone"><i
+                                    class="far fa-heart"></i></span></h3>
+                        <p> Ménilmontant</p>
 
-<a href="page3.html">
-        <article class="restaurants_card restaurants_card--reframe"><img src="images/restaurants/la-note-enchantee-3024.jpg"
-                alt="assiette de viande blanche en sauce avec ses accompagnements et verre de Spritz">
-            <div class="restaurants_card_footer">
-                <h3>La note enchantée   <span class="restaurants_card_footer_icone"><i class="far fa-heart"></i></span></h3>
-                    <p>Charonne</p>
-              
-            </div>
-        </article>
-    </a>
+                    </div>
+                </article>
+            </a>
 
-        <a href="page4.html">
-        <article class="restaurants_card"><img src="images/restaurants/a-la-francaise-3936.jpg"
-                alt="dressage de poisson, sauce et accompagnements vert">
-            <div class="restaurants_card_footer">
-                <h3>À la française<span class="restaurants_card_footer_icone"><i class="far fa-heart"></i></span> </h3>
-                   <p> Cité Rouge</p>
-                
-            </div>
-        </article>
-        </a>
+            <a href="page3.html">
+                <article class="restaurants_card restaurants_card--reframe"><img
+                        src="images/restaurants/la-note-enchantee-3024.jpg"
+                        alt="assiette de viande blanche en sauce avec ses accompagnements et verre de Spritz">
+                    <div class="restaurants_card_footer">
+                        <h3>La note enchantée <span class="restaurants_card_footer_icone"><i
+                                    class="far fa-heart"></i></span></h3>
+                        <p>Charonne</p>
 
-        <a href="page5.html">
-            <article class="restaurants_card"><img src="images/restaurants/le-delice-des-sens-3641.jpg"
-                    alt="assiette exotique, poisson en sauce accompagnés de légumes">
-                <div class="restaurants_card_footer">
-                    <h3>Le délice des sens<span class="restaurants_card_footer_icone"><i class="far fa-heart"></i></span></h3>
-                       <p> Folie-Méricourt</p>
-                    
+                    </div>
+                </article>
+            </a>
 
-                </div>
+            <a href="page4.html">
+                <article class="restaurants_card"><img src="images/restaurants/a-la-francaise-3936.jpg"
+                        alt="dressage de poisson, sauce et accompagnements vert">
+                    <div class="restaurants_card_footer">
+                        <h3>À la française<span class="restaurants_card_footer_icone"><i
+                                    class="far fa-heart"></i></span> </h3>
+                        <p> Cité Rouge</p>
 
-            </article>
-        </a>
+                    </div>
+                </article>
+            </a>
+
+            <a href="page5.html">
+                <article class="restaurants_card"><img src="images/restaurants/le-delice-des-sens-3641.jpg"
+                        alt="assiette exotique, poisson en sauce accompagnés de légumes">
+                    <div class="restaurants_card_footer">
+                        <h3>Le délice des sens<span class="restaurants_card_footer_icone"><i
+                                    class="far fa-heart"></i></span></h3>
+                        <p> Folie-Méricourt</p>
+                    </div>
+
+                </article>
+            </a>
+        </div>
 
     </section>
     <!-- end of section RESTAURANTS -->
@@ -143,16 +144,18 @@
         <h2 class="footer_logo">ohmyfood</h2>
 
         <a href="">
-            <h3 class="footer_text"><span class="footer_text_icones"><i class="fas fa-utensils"></i></span> Proposer un restaurant</h3>
+            <h3 class="footer_text"><span class="footer_text_icones"><i class="fas fa-utensils"></i></span> Proposer un
+                restaurant</h3>
         </a>
         <a href="">
-            <h3 class="footer_text" ><span class="footer_text_icones"><i class="fas fa-handshake"></i></span> Devenir partenaire</h3>
+            <h3 class="footer_text"><span class="footer_text_icones"><i class="fas fa-handshake"></i></span> Devenir
+                partenaire</h3>
         </a>
         <a href="">
-            <h3 class="footer_text" > Mentions légales</h3>
+            <h3 class="footer_text"> Mentions légales</h3>
         </a>
         <a href="">
-            <h3 class="footer_text" >Contact</h3>
+            <h3 class="footer_text">Contact</h3>
         </a>
 
     </footer>
