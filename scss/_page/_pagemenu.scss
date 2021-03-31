@@ -1,4 +1,6 @@
-.return_icone {
+
+ 
+ .return_icone {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -6,14 +8,15 @@
 }
 
 
-.container_menu{
+.container_menu {
 
     @include mobile-only {
-  display: flex;
-  justify-content: space-around;
+        display: flex;
+        justify-content: space-around;
     }
 
 }
+
 .menu {
     background-color: $grey-section;
     border-radius: 3em 3em 0 0;
@@ -36,10 +39,11 @@
         border-bottom: 3px solid $thurd-color;
         width: 40px;
         padding-top: $pad-top-section;
-        text-transform: uppercase; 
+        text-transform: uppercase;
+
         @include mobile-only {
-        margin-left: 20px;
-              }   
+            margin-left: 20px;
+        }
     }
 
     .button {
@@ -49,48 +53,146 @@
 
 }
 
+
+
+
 .menu_card {
     background-color: white;
     border-radius: 1.5em;
     @include box-shadow ($grey-shadow);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:  0 $min-general-margin 0 $min-general-margin;
-    margin: $general-margin 0 $general-margin 0;
+
+    justify-content: space-between;
+    align-items: center;
     height: 90px;
+    overflow: hidden;
+    margin: $general-margin 0 $general-margin 0;
+    
+    //animation apparition  calc(#{$i}s * #{$animation-delay})
+    @for $i from 1 to 4 {
+
+        &--#{$i} {animation: appear-card 3s backwards;
+            animation-delay: calc(#{$i}s * #{$animation-delay}) ;
+        }
+        }
+
+    //padding: 0 3%  0 3%;
 
     @include mobile-only {
         margin: 20px;
-        width: 28vw;
+        width: 26vw;
     }
-    
+
     &_text {
-        @include text-subtitle(400);
-        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        transition: width 0.4s linear;
+        margin-left: 4%;
+        width: 100%;
+
+        overflow: hidden;
 
 
+        &_titre {
+            padding-bottom: 11px;
+            flex-grow: 1;
+            width: 100%;
+            margin: 0;
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
     }
 
     p {
         @include text-standard(100);
         margin: 0;
+        //ellipse que sur les éléments inline
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &_price {
+        font-style: normal;
         display: flex;
-        justify-content: space-between;
-        z-index: 0;
+        justify-content: flex-end;
+        align-self: flex-end;
+        margin: 20px;
+    }
 
+    &_anim-confirm {
 
-        em {
-            @include text-standard(400);
-            font-style: normal;
-            background-color: white;
-            padding-left: 20px;
-            z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $thurd-color;
+        transition: width 0.4s linear;
+        width: 0;
+        height: 100%;
+
+        &-icone {
+            color: white;
+            @include text-subtitle(100);
         }
     }
+
+    &:hover .menu_card_anim-confirm {
+
+        width: 20%;
+        }
+    
+
+    &:hover .menu_card_anim-confirm-icone {
+        animation: rotate-icone 0.4s linear;
+     
+    }
+
+
 }
+
+
+
+
+
+
 
 main {
     background-color: $grey-section;
 
 }
+
+@keyframes rotate-icone {
+
+    0% {
+      transform: rotate(0deg);
+ 
+     }
+ 
+     100% {
+         transform: rotate(360deg);
+
+     }      
+ 
+ }
+ 
+
+ @keyframes appear-card {
+
+    0% {
+      opacity: 0; 
+     }
+ 
+   50% {
+        opacity: 1;
+     } 
+     
+     100% {
+        opacity: 1;
+     }   
+ 
+ }
+ 
