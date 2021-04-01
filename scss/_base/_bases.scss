@@ -11,7 +11,7 @@ a {
 
 
 a:hover{
-    @include mobile-only {
+    @include screen-only {
         transform: scale(1.1);
         transition: 100ms;
     }

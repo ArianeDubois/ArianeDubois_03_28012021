@@ -8,7 +8,7 @@
     z-index: 2;
 
     box-shadow: 0 15px 25px -1.4em $grey-shadow;
-    @include mobile-only {
+    @include screen-only {
 
         // ! on ne retrouve plus la barre du dessous du coup//
 

@@ -3,14 +3,14 @@
     background-color: $grey-section;
     text-align: center;
     padding-bottom: $pad-end-section;
-  
+
 
     &_form {
 
         display: flex;
         justify-content: center;
         align-items: baseline;
-       padding: $pad-container-text;
+        padding: $pad-container-text;
         background-color: darken($grey-section, 5%);
 
         &_text {
@@ -19,20 +19,23 @@
             max-width: $card-width;
             background-color: darken($grey-section, 5%);
             @include text-standard(100);
-            @include mobile-only {
+
+            @include screen-only {
                 // regler la visibilité de la barre de recherhcz//
-          margin-top: 70px;
-      }
-            &:focus{
-             outline: none;
+                margin-top: 70px;
             }
 
-            &::placeholder{
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
                 color: black;
             }
         }
+
         i {
-       @include text-standard(0);
+            @include text-standard(0);
         }
     }
 }
@@ -41,19 +44,38 @@
 
 .functioning {
 
-    @include space-section;
+@include space-section;
 
+      //padding-left-right
+      @include screen-only {
+      @include space-section-screen;
+    }
+
+
+    @include medium-screen-only {
+        @include space-section-medium-screen;
+      }
+
+
+.container{
+    display: flex;
+justify-content: space-between;
+
+}
     &_card {
+  
+
         background-color: $grey-section;
         padding: $pad-container-text;
         border-radius: 1.5em;
-       margin: $min-general-margin $general-margin $min-general-margin 30px ;
+    margin: $min-general-margin $general-margin $min-general-margin 30px ;
         position: relative;
     
         @include box-shadow($grey-shadow);
 
-        @include mobile-only {
-            width: 25vw; 
+        @include screen-only {
+            width: 25%; 
+            padding: 0;
         }
         
         &_text {
@@ -79,26 +101,62 @@
     }
 }
 
+
 .restaurants {
 
-@include space-section;
+
+    @include space-section;
     background-color: $grey-section;
+
+    //padding-left
+
+    @include medium-screen-only {
+        @include space-section-medium-screen;
+      }
+
+    @include screen-only {
+        @include space-section-screen;
+
+    }
+
+
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+    
+    
+    }
+
     &_card {
-        margin: $min-general-margin $general-margin $min-general-margin $general-margin;
+
         height: 60vmin;
         object-fit: contain;
         border-radius: 1em;
-    
+
         position: relative;
         overflow: hidden;
-
+        margin: $min-general-margin $general-margin $min-general-margin $general-margin ;
         @include box-shadow($grey-shadow);
-        @include mobile-only {
-            //flex-wrap ne prend pas en charge les poucentages 
-            width: 40vw; 
-            height: 25vw;
+
+
+        @include  medium-screen-only{
+     
+            margin: $min-general-margin 1vw $min-general-margin 1vw ;
+            height: 45vw;
+         
         }
 
+
+        @include screen-only {
+            //flex-wrap ne prend pas en charge les poucentages 
+            margin: $min-general-margin 1vw $min-general-margin 1vw ;
+
+            width: 33.3vw;
+            height: 22vw;
+        }
+
+      
         &--reframe img {
             object-position: 0 -170px;
         }
@@ -113,8 +171,9 @@
 
 }
 
+
 .restaurants_card_footer {
-height: 30%;
+    height: 30%;
     position: absolute;
     bottom: 0;
     background-color: white;
@@ -123,17 +182,53 @@ height: 30%;
     overflow: hidden;
 
     h3 {
-        padding: 0 15px 0 15px;
-        margin: 5% 0 0.3em  0;
+        padding: 0 $pad-container-text 0 $pad-container-text;
+        margin: 5% 0 0.3em 0;
         display: flex;
         justify-content: space-between;
         @include text-standard(700);
     }
 
     p {
-        padding-left: 15px;
+        padding-left: $pad-container-text;
         margin: 0 0 5% 0;
         @include text-standard(100);
+    }
+
+    //HEART
+    &_icone {
+        position: relative;
+
+        .icone-1 {
+            color: $gradient-color;
+            transition: opacity 0.2s;
+
+        }
+
+        .icone-2 {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            background: -webkit-linear-gradient($second-color, lighten($first-color, 5%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: scale(1.1);
+            transition: transform opacity 0.5s;
+        }
+
+
+        &:hover .icone-1 {
+            opacity: 0;
+        }
+
+        &:hover .icone-2 {
+            opacity: 1;
+            z-index: 1;
+
+
+        }
     }
 
 }

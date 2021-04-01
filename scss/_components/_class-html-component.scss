@@ -15,8 +15,10 @@
     border: none;
     padding: 15px;
     border-radius: 2em;
-    background: linear-gradient($second-color, lighten($first-color, 5%));
+    background: $gradient-color;
     @include box-shadow(black);
+    cursor: pointer;
+
     &:focus{
         outline: none;
     }
@@ -27,7 +29,7 @@
     flex-direction: column;
     justify-content: flex-start;
 
-    @include mobile-only {
+    @include screen-only {
 
      flex-direction: row;
      justify-content: center;
