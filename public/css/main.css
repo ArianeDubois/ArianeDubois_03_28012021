@@ -162,6 +162,11 @@ a {
   font-size: 1.1em;
   font-weight: 100;
 }
+@media (min-width: 599px) {
+  .discovery_form_text {
+    font-size: 1.3em;
+  }
+}
 @media (min-width: 1400px) {
   .discovery_form_text {
     margin-top: 70px;
@@ -176,6 +181,11 @@ a {
 .discovery_form i {
   font-size: 1.1em;
   font-weight: 0;
+}
+@media (min-width: 599px) {
+  .discovery_form i {
+    font-size: 1.3em;
+  }
 }
 
 .functioning {
@@ -206,12 +216,19 @@ a {
 @media (min-width: 1400px) {
   .functioning_card {
     width: 25%;
-    padding: 0;
+    display: flex;
+    justify-content: sp;
+    padding: 0 25px 0 0;
   }
 }
 .functioning_card_text {
   font-size: 1.1em;
   font-weight: 500;
+}
+@media (min-width: 599px) {
+  .functioning_card_text {
+    font-size: 1.3em;
+  }
 }
 .functioning_card_number {
   border-radius: 2em;
@@ -279,7 +296,7 @@ a {
 }
 
 .restaurants_card_footer {
-  height: 30%;
+  height: 8vh;
   position: absolute;
   bottom: 0;
   background-color: white;
@@ -311,10 +328,20 @@ a {
   font-size: 1.1em;
   font-weight: 700;
 }
+@media (min-width: 599px) {
+  .restaurants_card_footer h3 {
+    font-size: 1.3em;
+  }
+}
 .restaurants_card_footer p {
   margin: 0;
   font-size: 1.1em;
   font-weight: 100;
+}
+@media (min-width: 599px) {
+  .restaurants_card_footer p {
+    font-size: 1.3em;
+  }
 }
 
 .return_icone {
@@ -433,6 +460,11 @@ a {
   overflow: hidden;
   white-space: nowrap;
 }
+@media (min-width: 599px) {
+  .menu_card p {
+    font-size: 1.3em;
+  }
+}
 .menu_card_price {
   font-style: normal;
   display: flex;
@@ -505,6 +537,11 @@ main {
   font-size: 1.1em;
   font-weight: 400;
   color: #e6e6e6;
+}
+@media (min-width: 599px) {
+  .footer_text {
+    font-size: 1.3em;
+  }
 }
 .footer_text_icones {
   padding-right: 10px;

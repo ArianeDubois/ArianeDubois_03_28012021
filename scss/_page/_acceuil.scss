@@ -76,7 +76,9 @@
 
         @include screen-only {
             width: 25%;
-            padding: 0;
+            display: flex;
+            justify-content: sp;
+            padding: 0 25px 0 0;
         }
 
         &_text {
@@ -172,13 +174,20 @@
 
 
 .restaurants_card_footer {
-    height: 30%;
+    height: 8vh;
     position: absolute;
     bottom: 0;
     background-color: white;
     border-radius: 0 0 1em 1em;
     width: 100%;
     overflow: hidden;
+
+    @include medium-screen-only {
+
+      //
+       // height: 45vw;
+
+    }
 
 &_text{
 display: flex;

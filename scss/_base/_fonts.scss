@@ -7,6 +7,9 @@
 @mixin text-standard ($weight) {
     font-size: 1.1em;
     font-weight: $weight;
+    @include medium-screen-only {
+        font-size: 1.3em;
+    }
 }
 
 @mixin title-section {
