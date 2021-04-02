@@ -44,40 +44,41 @@
 
 .functioning {
 
-@include space-section;
+    @include space-section;
 
-      //padding-left-right
-      @include screen-only {
-      @include space-section-screen;
+    //padding-left-right
+    @include screen-only {
+        @include space-section-screen;
     }
 
 
     @include medium-screen-only {
         @include space-section-medium-screen;
-      }
+    }
 
 
-.container{
-    display: flex;
-justify-content: space-between;
+    .container {
+        display: flex;
+        justify-content: space-between;
 
-}
+    }
+
     &_card {
-  
+
 
         background-color: $grey-section;
         padding: $pad-container-text;
         border-radius: 1.5em;
-    margin: $min-general-margin $general-margin $min-general-margin 30px ;
+        margin: $min-general-margin $general-margin $min-general-margin 30px;
         position: relative;
-    
+
         @include box-shadow($grey-shadow);
 
         @include screen-only {
-            width: 25%; 
+            width: 25%;
             padding: 0;
         }
-        
+
         &_text {
             @include text-standard(500);
         }
@@ -112,7 +113,7 @@ justify-content: space-between;
 
     @include medium-screen-only {
         @include space-section-medium-screen;
-      }
+    }
 
     @include screen-only {
         @include space-section-screen;
@@ -121,11 +122,11 @@ justify-content: space-between;
 
 
 
-    .container{
+    .container {
         display: flex;
         justify-content: space-between;
-    
-    
+
+
     }
 
     &_card {
@@ -136,27 +137,25 @@ justify-content: space-between;
 
         position: relative;
         overflow: hidden;
-        margin: $min-general-margin $general-margin $min-general-margin $general-margin ;
+        margin: $min-general-margin $general-margin $min-general-margin $general-margin;
         @include box-shadow($grey-shadow);
 
+        @include medium-screen-only {
 
-        @include  medium-screen-only{
-     
-            margin: $min-general-margin 1vw $min-general-margin 1vw ;
+            margin: $min-general-margin 1vw $min-general-margin 1vw;
             height: 45vw;
-         
-        }
 
+        }
 
         @include screen-only {
             //flex-wrap ne prend pas en charge les poucentages 
-            margin: $min-general-margin 1vw $min-general-margin 1vw ;
+            margin: $min-general-margin 1vw $min-general-margin 1vw;
 
             width: 33.3vw;
             height: 22vw;
         }
 
-      
+
         &--reframe img {
             object-position: 0 -170px;
         }
@@ -181,101 +180,37 @@ justify-content: space-between;
     width: 100%;
     overflow: hidden;
 
+&_text{
+display: flex;
+flex-direction: column;
+justify-items:center ;
+padding: 1% $pad-container-text 0 $pad-container-text;
+margin: 0;
+}
+    .heart_icone {
+        position: absolute;
+        top: -30%;
+        right:-7%;
+        @include medium-screen-only {
+            top: -13%;
+            right:0;
+        }
+    }
+      
     h3 {
-        padding: 0 $pad-container-text 0 $pad-container-text;
-        margin: 5% 0 0.3em 0;
-        display: flex;
-        justify-content: space-between;
+        line-height: 2em;;
+        margin: 0;
+      //  padding: 0 $pad-container-text 0 $pad-container-text;
+       // margin: 5% 0 0.3em 0;
+
         @include text-standard(700);
     }
 
     p {
-        padding-left: $pad-container-text;
-        margin: 0 0 5% 0;
+        margin: 0;
+     //   padding-left: $pad-container-text;
+     //   margin: 0 0 5% 0;
         @include text-standard(100);
     }
 
-    //HEART
-    &_icone {
-      // position: relative;
-      display: flex;
-
-       /* .icone-1 {
-            color: $gradient-color;
-            transition: opacity 0.2s;
-
-        }
-
-        .icone-2 {
-
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-
-            background-image: $gradient-color;
-      
-          background-image: -webkit-linear-gradient($second-color, lighten($first-color, 5%));
-          background-image: -moz-linear-gradient($second-color, lighten($first-color, 5%));
-         -webkit-background-clip: text;
-         -moz-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-text-fill-color: transparent;
-            transform: scale(1.2);
-            transition: transform opacity 0.5s;
-        }
-
-
-        &:hover .icone-1 {
-            opacity: 0;
-        }
-
-        &:hover .icone-2 {
-            opacity: 1;
-            z-index: 1;
-
-
-        }
-  */  }
-
 }
-
-
-.container-coeur-contour{
-    overflow: hidden;
-    position: relative;
-    clip-path: url(#svgPath);
-      //taille du background;
-      height:100px;
-     width:100px;
-    transform: scale(0.2);
-    
-    
-    }
-    
-    #coeur-contour{
-        fill:none;
-      stroke:black;
-      stroke-width:1em;
-    
-    
-    }
-    
-    .background {
-    
-      opacity: 1;
-      position: absolute;
-      top: 0;
-      background:$gradient-color;
-     transform: translateY(100px) ;
-        transition: transform 0.5s ease-out;
-        width:100%;
-      height:100%;
-    
-    }
-    
-    .container-coeur-contour:hover .background {
-    
-     transform: translateY(0) ;
-    
-     }

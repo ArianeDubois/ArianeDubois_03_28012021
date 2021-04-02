@@ -1,16 +1,11 @@
-
- 
- .return_icone {
+.return_icone {
     position: absolute;
     top: 30px;
     left: 30px;
     font-size: 0.7em;
 }
 
-
-
-
-.menu {
+.page {
     background-color: $grey-section;
     border-radius: 3em 3em 0 0;
     padding: $general-margin;
@@ -20,44 +15,29 @@
     flex-direction: column;
     justify-content: center;
 
+
     @include screen-only {
         //padding: 2vw 10vw 2vw 10vw;
         @include space-section-screen;
     }
 
+    &_header {
 
-    .container_menu {
-
-        @include screen-only {
-            display: flex;
-            justify-content: space-between;
+        &_name {
+            @include font-logo;
+            position: relative;
         }
-//renomer ce bordel
-@include screen-only {
-        .subtitle{
-  
-    
 
-        
+        .heart_icone {
+            position: absolute;
+            top: 2vw;
+            right: 0;
+
+            @include screen-only {
+                right: 11.5vw;
+            }
         }
-    
-    }
-}
-    
 
-    &_name {
-        @include font-logo;
-        @include title-section;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &_subtitle {
-        @include text-subtitle(100);
-        width: 10%;
-        border-bottom: 3px solid $thurd-color;
-        padding-top: $pad-top-section;
-        text-transform: uppercase;
     }
 
     .button {
@@ -67,138 +47,152 @@
 
 }
 
-.menu_card {
-    background-color: white;
-    border-radius: 1.5em;
-    @include box-shadow ($grey-shadow);
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-    overflow: hidden;
- margin: $general-margin 0 $general-margin 0;
-    
-    //animation apparition  calc(#{$i}s * #{$animation-delay})
-    @for $i from 1 to 4 {
-
-        &--#{$i} {animation: appear-card 3s backwards;
-            animation-delay: calc(#{$i}s * #{$animation-delay}) ;
-        }
-        }
-
+.menu {
     @include screen-only {
-        width: 23vw;
-       margin: $min-general-margin 0 $min-general-margin 0;
-    
+        display: flex;
+        justify-content: space-between;
     }
 
-    &_text {
+    &_column_title {
+        @include text-subtitle(100);
+        width: 10%;
+        border-bottom: 3px solid $thurd-color;
+        padding-top: $pad-top-section;
+        text-transform: uppercase;
+    }
+
+
+    &_card {
+        background-color: white;
+        border-radius: 1.5em;
+        @include box-shadow ($grey-shadow);
         display: flex;
-        flex-wrap: wrap;
+
         justify-content: space-between;
-        transition: width 0.4s linear;
-        margin-left: 4%;
-        width: 100%;
-
+        align-items: center;
+        height: 90px;
         overflow: hidden;
+        margin: $general-margin 0 $general-margin 0;
 
+        //animation apparition  calc(#{$i}s * #{$animation-delay})
+        @for $i from 1 to 5 {
 
-        &_titre {
-            padding-bottom: 11px;
-            flex-grow: 1;
+            &--#{$i} {
+                animation: appear-card 3s backwards;
+                animation-delay: calc(#{$i}s * #{$animation-delay});
+            }
+        }
+
+        @include screen-only {
+            width: 23vw;
+            margin: $min-general-margin 0 $min-general-margin 0;
+
+        }
+
+        &_text {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            transition: width 0.4s linear;
+            margin-left: 4%;
             width: 100%;
-            margin: 0;
 
+            overflow: hidden;
+
+
+            &_titre {
+                padding-bottom: 11px;
+                flex-grow: 1;
+                width: 100%;
+                margin: 0;
+
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 100%;
+            }
+        }
+
+        p {
+            @include text-standard(100);
+            margin: 0;
+            //ellipse que sur les éléments inline
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-            width: 100%;
         }
-    }
 
-    p {
-        @include text-standard(100);
-        margin: 0;
-        //ellipse que sur les éléments inline
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-
-    &_price {
-        font-style: normal;
-        display: flex;
-        justify-content: flex-end;
-        align-self: flex-end;
-        margin: 20px;
-    }
-
-    &_anim-confirm {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $thurd-color;
-        transition: width 0.4s linear;
-        width: 0;
-        height: 100%;
-
-        &-icone {
-            color: white;
-            @include text-subtitle(100);
+        &_price {
+            font-style: normal;
+            display: flex;
+            justify-content: flex-end;
+            align-self: flex-end;
+            margin: 20px;
         }
-    }
 
-    &:hover .menu_card_anim-confirm {
+        &_anim-confirm {
 
-        width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $thurd-color;
+            transition: width 0.4s linear;
+            width: 0;
+            height: 100%;
+
+            &-icone {
+                color: white;
+                @include text-subtitle(100);
+            }
         }
-    
 
-    &:hover .menu_card_anim-confirm-icone {
-  animation: rotate-icone 0.4s linear;
-     
+        &:hover .menu_card_anim-confirm {
+
+            width: 35%;
+        }
+
+
+        &:hover .menu_card_anim-confirm-icone {
+            animation: rotate-icone 0.4s linear;
+
+        }
+
+
     }
-
 
 }
-
-
 
 main {
     background-color: $grey-section;
 
 }
-
+// animations 
 @keyframes rotate-icone {
 
     0% {
-      transform: rotate(0deg);
- 
-     }
- 
-     100% {
-         transform: rotate(360deg);
+        transform: rotate(0deg);
 
-     }      
- 
- }
- 
+    }
 
- @keyframes appear-card {
+    100% {
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes appear-card {
 
     0% {
-      opacity: 0; 
-     }
- 
-   50% {
+        opacity: 0;
+    }
+
+    50% {
         opacity: 1;
-     } 
-     
-     100% {
+    }
+
+    100% {
         opacity: 1;
-     }   
- 
- }
- 
+    }
+
+}

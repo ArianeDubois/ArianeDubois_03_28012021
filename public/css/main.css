@@ -87,6 +87,40 @@ a {
   }
 }
 
+.heart_icone {
+  display: flex;
+}
+
+.heart_icone-visible {
+  overflow: hidden;
+  position: relative;
+  clip-path: url(#heart_icone-svg-path);
+  height: 100px;
+  width: 100px;
+  transform: scale(0.28);
+}
+
+#heart_icone-visible-path {
+  fill: none;
+  stroke: black;
+  stroke-width: 1em;
+}
+
+.background-radient {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(#FF79DA, #a16be0);
+  transform: translateY(100px);
+  transition: transform 0.5s ease-out;
+  width: 100%;
+  height: 100%;
+}
+
+.heart_icone-visible:hover .background-radient {
+  transform: translateY(0);
+}
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -253,89 +287,34 @@ a {
   width: 100%;
   overflow: hidden;
 }
-.restaurants_card_footer h3 {
-  padding: 0 12px 0 12px;
-  margin: 5% 0 0.3em 0;
+.restaurants_card_footer_text {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-items: center;
+  padding: 1% 12px 0 12px;
+  margin: 0;
+}
+.restaurants_card_footer .heart_icone {
+  position: absolute;
+  top: -30%;
+  right: -7%;
+}
+@media (min-width: 599px) {
+  .restaurants_card_footer .heart_icone {
+    top: -13%;
+    right: 0;
+  }
+}
+.restaurants_card_footer h3 {
+  line-height: 2em;
+  margin: 0;
   font-size: 1.1em;
   font-weight: 700;
 }
 .restaurants_card_footer p {
-  padding-left: 12px;
-  margin: 0 0 5% 0;
+  margin: 0;
   font-size: 1.1em;
   font-weight: 100;
-}
-.restaurants_card_footer_icone {
-  display: flex;
-  /* .icone-1 {
-            color: $gradient-color;
-            transition: opacity 0.2s;
-
-        }
-
-        .icone-2 {
-
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-
-            background-image: $gradient-color;
-
-          background-image: -webkit-linear-gradient($second-color, lighten($first-color, 5%));
-          background-image: -moz-linear-gradient($second-color, lighten($first-color, 5%));
-         -webkit-background-clip: text;
-         -moz-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-text-fill-color: transparent;
-            transform: scale(1.2);
-            transition: transform opacity 0.5s;
-        }
-
-
-        &:hover .icone-1 {
-            opacity: 0;
-        }
-
-        &:hover .icone-2 {
-            opacity: 1;
-            z-index: 1;
-
-
-        }
-  */
-}
-
-.container-coeur-contour {
-  overflow: hidden;
-  position: relative;
-  clip-path: url(#svgPath);
-  height: 100px;
-  width: 100px;
-  transform: scale(0.2);
-}
-
-#coeur-contour {
-  fill: none;
-  stroke: black;
-  stroke-width: 1em;
-}
-
-.background {
-  opacity: 1;
-  position: absolute;
-  top: 0;
-  background: linear-gradient(#FF79DA, #a16be0);
-  transform: translateY(100px);
-  transition: transform 0.5s ease-out;
-  width: 100%;
-  height: 100%;
-}
-
-.container-coeur-contour:hover .background {
-  transform: translateY(0);
 }
 
 .return_icone {
@@ -345,7 +324,7 @@ a {
   font-size: 0.7em;
 }
 
-.menu {
+.page {
   background-color: whitesmoke;
   border-radius: 3em 3em 0 0;
   padding: 5vmin;
@@ -356,24 +335,36 @@ a {
   justify-content: center;
 }
 @media (min-width: 1400px) {
-  .menu {
+  .page {
     padding: 30px 13vw 50px 13vw;
   }
 }
+.page_header_name {
+  font-family: "Shrikhand", cursive;
+  position: relative;
+}
+.page_header .heart_icone {
+  position: absolute;
+  top: 2vw;
+  right: 0;
+}
 @media (min-width: 1400px) {
-  .menu .container_menu {
+  .page_header .heart_icone {
+    right: 11.5vw;
+  }
+}
+.page .button {
+  margin: 30px auto 0 auto;
+  padding: 18px 50px 18px 50px;
+}
+
+@media (min-width: 1400px) {
+  .menu {
     display: flex;
     justify-content: space-between;
   }
 }
-.menu_name {
-  font-family: "Shrikhand", cursive;
-  font-weight: bold;
-  font-size: 1.7em;
-  display: flex;
-  justify-content: space-between;
-}
-.menu_subtitle {
+.menu_column_title {
   font-size: 1.3em;
   font-weight: 100;
   line-height: 1.6em;
@@ -382,11 +373,6 @@ a {
   padding-top: 30px;
   text-transform: uppercase;
 }
-.menu .button {
-  margin: 30px auto 0 auto;
-  padding: 18px 50px 18px 50px;
-}
-
 .menu_card {
   background-color: white;
   border-radius: 1.5em;
@@ -409,6 +395,10 @@ a {
 .menu_card--3 {
   animation: appear-card 3s backwards;
   animation-delay: calc(3s * 0.2);
+}
+.menu_card--4 {
+  animation: appear-card 3s backwards;
+  animation-delay: calc(4s * 0.2);
 }
 @media (min-width: 1400px) {
   .menu_card {

@@ -37,3 +37,40 @@
 
     }
     }
+
+//HEART
+.heart_icone {
+    display: flex;
+}
+
+.heart_icone-visible {
+    overflow: hidden;
+    position: relative;
+    clip-path: url(#heart_icone-svg-path);
+    //taille du background;
+    height: 100px;
+    width: 100px;
+    transform: scale(0.28);
+}
+
+#heart_icone-visible-path {
+    fill: none;
+    stroke: black;
+    stroke-width: 1em;
+}
+
+.background-radient {
+
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    background: $gradient-color;
+    transform: translateY(100px);
+    transition: transform 0.5s ease-out;
+    width: 100%;
+    height: 100%;
+}
+
+.heart_icone-visible:hover .background-radient {
+    transform: translateY(0);
+}
