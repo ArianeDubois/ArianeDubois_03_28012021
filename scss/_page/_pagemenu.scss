@@ -1,3 +1,25 @@
+.img_background_1, .img_background_3, .img_background_4{
+
+    @include medium-screen-only {
+      background-position: 0 -14vw;
+    }
+}
+
+.img_background_4{
+   
+    @include medium-screen-only {
+        background-position: 0 -20vw;
+      }
+}
+
+.img_background_3{
+    background-position: 0 -20vw;
+}
+
+.img_background_2{
+  background-position: 0 -40vw;
+
+}
 .return_icone {
     position: absolute;
     top: 30px;

@@ -285,18 +285,21 @@ a {
     height: 22vw;
   }
 }
-.restaurants_card--reframe img {
-  object-position: 0 -170px;
-}
 .restaurants_card img {
   width: 100%;
   border-radius: 1em;
   height: auto;
   object-fit: cover;
+  object-position: 0 -30px;
+}
+@media (min-width: 1400px) {
+  .restaurants_card img {
+    object-position: 0 -100px;
+  }
 }
 
 .restaurants_card_footer {
-  height: 8vh;
+  height: 10vh;
   position: absolute;
   bottom: 0;
   background-color: white;
@@ -342,6 +345,182 @@ a {
   .restaurants_card_footer p {
     font-size: 1.3em;
   }
+}
+
+.background_loader {
+  position: fixed;
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding-left: 5vw;
+  opacity: 0.98;
+  animation: loader 0.01s 3.5s forwards;
+}
+.background_loader .loader {
+  margin: auto;
+  height: 30vw;
+  width: 100%;
+  animation: loader 0.01s 3.5s forwards;
+  position: fixed;
+}
+.background_loader .loader_text {
+  color: #9356DC;
+  font-size: 1.1em;
+  font-weight: 400;
+  align-self: flex-end;
+  width: 100%;
+  text-align: center;
+  padding-right: 13vw;
+}
+@media (min-width: 599px) {
+  .background_loader .loader_text {
+    font-size: 1.3em;
+  }
+}
+.background_loader .rectangle {
+  width: 5.5%;
+  height: 4%;
+  border-radius: 0.9em;
+  background: #9356DC;
+  box-shadow: -1px -1px 5px 0.01em silver;
+}
+
+.pied-1 {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 49%;
+  left: 44%;
+  animation: rotateX ease-in-out 1.5s 0.5s both;
+}
+
+.pied-2 {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  animation: rotateX 1.8s 0.5s both;
+}
+
+.assise {
+  position: absolute;
+  top: 38%;
+  left: 47%;
+  animation: rotateY 2s 0.5s both;
+  transform-origin: right;
+}
+
+.dossier {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  animation: rotateX 1.8s 0.5s both;
+}
+
+.pied-gauche-1 {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 40%;
+  left: 31%;
+  animation: rotateX ease-in-out 2s 0.5s both;
+  transform-origin: left;
+}
+
+.pied-gauche-2 {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 49%;
+  left: 34%;
+  animation: rotateX 2s 0.5s both;
+}
+
+.assise-gauche {
+  position: absolute;
+  top: 38%;
+  left: 31%;
+  animation: rotateY 2s 0.5s both;
+}
+
+.dossier-gauche {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 27%;
+  left: 28%;
+  animation: rotateX 2s 0.5s both;
+}
+
+.table {
+  position: absolute;
+  top: 30%;
+  left: 39%;
+  animation: rotateY ease-in-out 2.4s 0.5s both;
+}
+
+.pied-table {
+  transform: rotate(90deg);
+  transform-origin: 0;
+  position: absolute;
+  top: 38%;
+  left: 42%;
+  animation: rotateX 2.3s 0.5s both;
+}
+
+@keyframes rotateX {
+  0% {
+    transform: rotate(225deg);
+  }
+  33% {
+    transform: rotate(180deg);
+  }
+  66% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes rotateY {
+  0% {
+    transform: rotate(135deg);
+  }
+  33% {
+    transform: rotate(-50deg);
+  }
+  66% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -5;
+  }
+}
+@media (min-width: 599px) {
+  .img_background_1, .img_background_3, .img_background_4 {
+    background-position: 0 -14vw;
+  }
+}
+
+@media (min-width: 599px) {
+  .img_background_4 {
+    background-position: 0 -20vw;
+  }
+}
+
+.img_background_3 {
+  background-position: 0 -20vw;
+}
+
+.img_background_2 {
+  background-position: 0 -40vw;
 }
 
 .return_icone {

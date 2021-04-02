@@ -158,23 +158,28 @@
         }
 
 
-        &--reframe img {
-            object-position: 0 -170px;
-        }
+
 
         img {
             width: 100%;
             border-radius: 1em;
             height: auto;
             object-fit: cover;
+            object-position: 0 -30px;
+
+            @include screen-only {
+                object-position: 0 -100px;
+            }
+
         }
+
     }
 
 }
 
 
 .restaurants_card_footer {
-    height: 8vh;
+    height: 10vh;
     position: absolute;
     bottom: 0;
     background-color: white;
@@ -182,44 +187,228 @@
     width: 100%;
     overflow: hidden;
 
-    @include medium-screen-only {
 
-      //
-       // height: 45vw;
-
+    &_text {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        padding: 1% $pad-container-text 0 $pad-container-text;
+        margin: 0;
     }
 
-&_text{
-display: flex;
-flex-direction: column;
-justify-items:center ;
-padding: 1% $pad-container-text 0 $pad-container-text;
-margin: 0;
-}
     .heart_icone {
         position: absolute;
         top: -30%;
-        right:-7%;
+        right: -7%;
+
         @include medium-screen-only {
             top: -13%;
-            right:0;
+            right: 0;
         }
     }
-      
+
     h3 {
-        line-height: 2em;;
+        line-height: 2em;
+        ;
         margin: 0;
-      //  padding: 0 $pad-container-text 0 $pad-container-text;
-       // margin: 5% 0 0.3em 0;
+        //  padding: 0 $pad-container-text 0 $pad-container-text;
+        // margin: 5% 0 0.3em 0;
 
         @include text-standard(700);
     }
 
     p {
         margin: 0;
-     //   padding-left: $pad-container-text;
-     //   margin: 0 0 5% 0;
+        //   padding-left: $pad-container-text;
+        //   margin: 0 0 5% 0;
         @include text-standard(100);
     }
 
+}
+
+
+
+//loader
+//racourcir c'est trop long !!!
+
+.background_loader {
+    position: fixed;
+    background-color: $grey-section;
+    height:100%;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+   padding-left: 5vw;
+   opacity: 0.98;
+   animation: loader 0.01s 3.5s forwards;
+
+.loader {
+    margin: auto;
+  // important la position fix pour le loeade
+    height: 30vw;
+    width: 100%;
+    animation: loader 0.01s 3.5s forwards;
+    
+  
+
+ 
+    position: fixed;
+&_text {
+    color:$first-color;
+    @include text-standard(400);
+    align-self: flex-end;
+width: 100%; 
+text-align: center;
+padding-right: 13vw;
+
+}
+
+}
+
+.rectangle {
+    width:5.5%;
+height: 4%;
+    border-radius: 0.9em;
+    background: $first-color;
+
+    box-shadow: -1px -1px 5px 0.01em lighten(grey, 25%);
+}
+
+}
+
+.pied-1 {
+    transform: rotate($rotate);
+    position: absolute;
+    top: 49%;
+    left: 44%;
+    animation: rotateX ease-in-out 1.5s $delay both;
+
+}
+
+.pied-2 {
+    transform: rotate($rotate);
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    animation: rotateX 1.8s $delay  both;
+}
+
+.assise {
+
+    position: absolute;
+    top: 38%;
+    left: 47%;
+    animation: rotateY 2s $delay  both;
+    transform-origin: right;
+}
+
+.dossier {
+    transform: rotate($rotate);
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    animation: rotateX 1.8s $delay  both;
+}
+
+.pied-gauche-1 {
+    transform: rotate($rotate);
+    position: absolute;
+    top: 40%;
+    left: 31%;
+    animation: rotateX ease-in-out 2s $delay both;
+    transform-origin: left;
+}
+
+.pied-gauche-2 {
+    transform: rotate($rotate);
+    position: absolute;
+    top: 49%;
+    left: 34%;
+    animation: rotateX 2s $delay both;
+}
+
+.assise-gauche {
+
+    position: absolute;
+    top: 38%;
+    left: 31%;
+    animation: rotateY 2s $delay both;
+}
+
+.dossier-gauche {
+    transform: rotate($rotate);
+    position: absolute;
+    top: 27%;
+    left: 28%;
+    animation: rotateX 2s $delay both;
+}
+
+.table {
+    position: absolute;
+    top: 30%;
+    left: 39%;
+    animation: rotateY ease-in-out 2.4s $delay both;
+}
+
+.pied-table {
+    transform: rotate(90deg);
+    transform-origin: (0);
+    position: absolute;
+    top: 38%;
+    left: 42%;
+    animation: rotateX 2.3s $delay both;
+}
+
+
+@keyframes rotateX {
+
+    0% {
+        transform: rotate(225deg); //225
+    }
+
+    33% {
+        transform: rotate(180deg);
+
+    }
+
+    66% {
+        transform: rotate(135deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+
+}
+
+
+@keyframes rotateY {
+
+    0% {
+        transform: rotate(135deg); //135
+    }
+
+    33% {
+        transform: rotate(-50deg); //90
+    }
+
+    66% {
+        transform: rotate(45deg); //45
+
+    }
+
+    100% {
+        transform: rotate(0deg);
+
+    }
+}
+
+@keyframes loader {
+    100% {
+       opacity: 0;
+      // transform: translateX(-2000px);
+        z-index: -5;
+    }
 }
