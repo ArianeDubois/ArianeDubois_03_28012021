@@ -197,9 +197,10 @@ justify-content: space-between;
 
     //HEART
     &_icone {
-        position: relative;
+      // position: relative;
+      display: flex;
 
-        .icone-1 {
+       /* .icone-1 {
             color: $gradient-color;
             transition: opacity 0.2s;
 
@@ -211,10 +212,16 @@ justify-content: space-between;
             top: 0;
             left: 0;
             opacity: 0;
-            background: -webkit-linear-gradient($second-color, lighten($first-color, 5%));
-            -webkit-background-clip: text;
+
+            background-image: $gradient-color;
+      
+          background-image: -webkit-linear-gradient($second-color, lighten($first-color, 5%));
+          background-image: -moz-linear-gradient($second-color, lighten($first-color, 5%));
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
             -webkit-text-fill-color: transparent;
-            transform: scale(1.1);
+            -moz-text-fill-color: transparent;
+            transform: scale(1.2);
             transition: transform opacity 0.5s;
         }
 
@@ -229,6 +236,46 @@ justify-content: space-between;
 
 
         }
-    }
+  */  }
 
 }
+
+
+.container-coeur-contour{
+    overflow: hidden;
+    position: relative;
+    clip-path: url(#svgPath);
+      //taille du background;
+      height:100px;
+     width:100px;
+    transform: scale(0.2);
+    
+    
+    }
+    
+    #coeur-contour{
+        fill:none;
+      stroke:black;
+      stroke-width:1em;
+    
+    
+    }
+    
+    .background {
+    
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      background:$gradient-color;
+     transform: translateY(100px) ;
+        transition: transform 0.5s ease-out;
+        width:100%;
+      height:100%;
+    
+    }
+    
+    .container-coeur-contour:hover .background {
+    
+     transform: translateY(0) ;
+    
+     }
