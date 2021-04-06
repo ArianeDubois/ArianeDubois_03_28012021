@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La palette du goût</title>
+    <title>À la française</title>
 
-    <meta name="description" content="La palette du goût restaurant" />
+    <meta name="description" content="À la française restaurant" />
 
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,53 +20,53 @@
 
 </head>
 
-<body>
+<header class="header">
+    <!-- attention à la taille du logo -->
+    <h1 class="header_logo"><a href="./acceuil.html" class="return_icone"><i class="fas fa-arrow-left"></i></a>ohmyfood
+    </h1>
+</header>
 
-    <header class="header">
-        <!-- attention à la taille du logo -->
-        <h1 class="header_logo"><a href="./index.html" class="return_icone"><i
-                    class="fas fa-arrow-left"></i></a>ohmyfood</h1>
-    </header>
 
-    <main>
 
-        <div class="img_background_1"> </div>
-        <section class="page">
-            <div class="page_header">
-                <!---->
-                <h2 class="page_header_name"> La palette du goût</h2>
+<main>
+    <!-- img -->
+    <div class="img_background_3"> </div>
 
-                <!-- coeur-->
-                <div class="heart_icone">
+    <section class="page">
+        <div class="page_header">
+            <h2 class="page_header_name"> La palette du goût</h2>
+            <!-- coeur-->
+            <div class="heart_icone">
+                <svg>
+                    <clipPath id="heart_icone-svg-path">
+                        <path d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                  c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                  C90.5,46.3,80.7,55.5,80.2,55.9z " />
+                    </clipPath>
+                </svg>
+                <div class="heart_icone-visible">
                     <svg>
-                        <clipPath id="heart_icone-svg-path">
-                            <path d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
-                          c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
-                          C90.5,46.3,80.7,55.5,80.2,55.9z " />
-                        </clipPath>
+                        <path id="heart_icone-visible-path" d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                  c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                  C90.5,46.3,80.7,55.5,80.2,55.9z" />
                     </svg>
-                    <div class="heart_icone-visible">
-                        <svg>
-                            <path id="heart_icone-visible-path" d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
-                          c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
-                          C90.5,46.3,80.7,55.5,80.2,55.9z" />
-                        </svg>
-                        <div class="background-radient"> </div>
-                    </div> 
-                </div> <!--fin de heart_icone-->
+                    <div class="background-radient"> </div>
+                </div>
+            </div>
+            <!--fin de heart_icone-->
 
-            </div> <!-- fin de menu header-->
+        </div> <!-- fin de menu header-->
 
-            <!-- ENTRÉES -->
+        <!-- ENTRÉES -->
+     
             <div class="menu">
-
                 <div class="menu_column">
                     <h2 class="menu_column_title">Entrées</h2>
 
                     <div class="menu_card menu_card--1">
                         <div class="menu_card_text">
-                            <h3 class="menu_card_text_titre"> Fricassée d'escargot </h3>
-                            <p> Au piment d'Espelette </p>
+                            <h3 class="menu_card_text_titre"> Tartare de poulpe acidulé</h3>
+                            <p>Aux zestes d'orange</p>
                         </div>
 
                         <div class="menu_card_price">25€</div>
@@ -79,11 +79,11 @@
                     <div class="menu_card menu_card--2">
 
                         <div class="menu_card_text">
-                            <h3 class="menu_card_text_titre"> Foie gras de canard mi-cuit </h3>
-                            <p> Et ses copeaux de truffe noire </p>
+                            <h3 class="menu_card_text_titre"> Velouté de légumes d'antan </h3>
+                            <p>Carotte, panais, topinambour</p>
                         </div>
 
-                        <div class="menu_card_price">35€</div>
+                        <div class="menu_card_price">25€</div>
 
                         <div class="menu_card_anim-confirm"><span class="menu_card_anim-confirm-icone"><i
                                     class="fas fa-check-circle"></i></span>
@@ -92,8 +92,8 @@
 
                     <div class="menu_card menu_card--3">
                         <div class="menu_card_text">
-                            <h3 class="menu_card_text_titre"> Oeuf au plat</h3>
-                            <p> Assaisonné à la truffe sur lit de caviar </p>
+                            <h3 class="menu_card_text_titre"> Soupe à l'oignon</h3>
+                            <p>Revisitée</p>
                         </div>
 
                         <div class="menu_card_price">20€</div>
@@ -105,11 +105,10 @@
                 <!-- PLATS -->
                 <div class="menu_column">
                     <h2 class="menu_column_title">Plats</h2>
-
                     <div class="menu_card menu_card--1">
                         <div class="menu_card_text">
-                            <h3 class="menu_card_text_titre"> Filet de boeuf aux herbes</h3>
-                            <p> Accompagné de sa ribambelle de légumes </p>
+                            <h3 class="menu_card_text_titre"> Coquilles Saint-Jacques</h3>
+                            <p> Accompagnées d'une purée de panais</p>
                         </div>
                         <div class="menu_card_price">40€</div>
                         <div class="menu_card_anim-confirm"><span class="menu_card_anim-confirm-icone"><i
@@ -119,8 +118,8 @@
 
                     <div class="menu_card menu_card--2">
                         <div class="menu_card_text">
-                            <h3 class="menu_card_text_titre">Parmentier de queue de boeuf </h3>
-                            <p> À la truffe noire sur sa purée de panais </p>
+                            <h3 class="menu_card_text_titre">Magret de canard</h3>
+                            <p> Et parmentier de pommes de terre</p>
                         </div>
 
                         <div class="menu_card_price">35€</div>
@@ -131,8 +130,8 @@
 
                     <div class="menu_card menu_card--3">
                         <div class="menu_card_text">
-                            <h3 class="menu_card_text_titre"> Filet de turbot</h3>
-                            <p> Aux agrumes </p>
+                            <h3 class="menu_card_text_titre"> Pigeonneau d’Ille-et-Vilaine</h3>
+                            <p>Sur son lit de gnocchis aux légumes</p>
                         </div>
 
                         <div class="menu_card_price">44€</div>
@@ -148,8 +147,8 @@
 
                     <div class="menu_card menu_card--1">
                         <div class="menu_card_text">
-                            <h3 class="menu_card_text_titre"> Paris-Brest</h3>
-                            <p>Revisité </p>
+                            <h3 class="menu_card_text_titre"> Pétales de violettes glacés</h3>
+                            <p>Et purée de noisettes</p>
                         </div>
 
                         <div class="menu_card_price">18€</div>
@@ -160,8 +159,8 @@
 
                     <div class="menu_card menu_card--2">
                         <div class="menu_card_text">
-                            <h3 class="menu_card_text_titre"> Macaron au chocolat d'exception </h3>
-                            <p>Et glace à la vanille de Madagascar </p>
+                            <h3 class="menu_card_text_titre"> Fondant au chocolat</h3>
+                            <p>Revisité</p>
                         </div>
 
                         <div class="menu_card_price">22€</div>
@@ -172,15 +171,14 @@
 
                     <div class="menu_card menu_card--3">
                         <div class="menu_card_text">
-                            <h3 class="menu_card_text_titre"> Mousse au chocolat </h3>
-                            <p> Au piment d'Espelette et à la truffe noire </p>
+                            <h3 class="menu_card_text_titre"> Millefeuille croustillant</h3>
+                            <p> Myrtilles et pâte d’amande</p>
                         </div>
                         <div class="menu_card_price">23€</div>
                         <div class="menu_card_anim-confirm"><span class="menu_card_anim-confirm-icone"><i
                                     class="fas fa-check-circle"></i></span>
                         </div>
                     </div>
-
                 </div><!-- fin de DESSERTS -->
             </div> <!-- fin de CONTAINER MENU -->
             <!-- BOUTON COMMANDER -->
@@ -192,29 +190,29 @@
 
 
 
-        </section>
+    </section>
 
-    </main>
+</main>
 
-    <footer class="footer">
-        <h2 class="footer_logo">ohmyfood</h2>
+<footer class="footer">
+    <h2 class="footer_logo">ohmyfood</h2>
 
-        <a href="">
-            <h3 class="footer_text"><span class="footer_text_icones"><i class="fas fa-utensils"></i></span> Proposer un
-                restaurant</h3>
-        </a>
-        <a href="">
-            <h3 class="footer_text"><span class="footer_text_icones"><i class="fas fa-handshake"></i></span> Devenir
-                partenaire</h3>
-        </a>
-        <a href="">
-            <h3 class="footer_text"> Mentions légales</h3>
-        </a>
-        <a href="mailto:ohmyfood@mail.com">
-            <h3 class="footer_text">Contact</h3>
-        </a>
+    <a href="">
+        <h3 class="footer_text"><span class="footer_text_icones"><i class="fas fa-utensils"></i></span> Proposer un
+            restaurant</h3>
+    </a>
+    <a href="">
+        <h3 class="footer_text"><span class="footer_text_icones"><i class="fas fa-handshake"></i></span> Devenir
+            partenaire</h3>
+    </a>
+    <a href="">
+        <h3 class="footer_text"> Mentions légales</h3>
+    </a>
+    <a href="mailto:ohmyfood@mail.com">
+        <h3 class="footer_text">Contact</h3>
+    </a>
 
-    </footer>
+</footer>
 
 
 
