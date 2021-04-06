@@ -48,6 +48,7 @@
         &_name {
             @include font-logo;
             position: relative;
+          @include title-section;
         }
 
         .heart_icone {
@@ -123,6 +124,7 @@
 
 
             &_titre {
+                @include text-standard(400);
                 padding-bottom: 11px;
                 flex-grow: 1;
                 width: 100%;
@@ -168,10 +170,10 @@
             }
         }
 
-        &:hover .menu_card_anim-confirm {
+      &:hover .menu_card_anim-confirm {
 
-            width: 35%;
-        }
+          width: 35%;
+       }
 
 
         &:hover .menu_card_anim-confirm-icone {

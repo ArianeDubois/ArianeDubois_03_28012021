@@ -50,7 +50,11 @@
     //taille du background;
     height: 100px;
     width: 100px;
-    transform: scale(0.28);
+    transform: scale(0.29);
+    @include medium-screen-only{
+        transform: scale(0.4);
+
+    }
 }
 
 #heart_icone-visible-path {

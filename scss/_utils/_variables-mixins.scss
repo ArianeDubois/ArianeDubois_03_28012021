@@ -8,7 +8,7 @@ $grey-shadow: #9e9d9d;
 
 $gradient-color:  linear-gradient($second-color, lighten($first-color, 5%));
 
-
+//layout
 
 // space//
 $pad-top-section: 30px;
@@ -22,7 +22,6 @@ $padding-screen: 13vw;
 
 $padding-medium-screen: 5vw;
 
-//layout
 @mixin space-section{
     padding: $pad-top-section 0 $pad-end-section 0;
 }
@@ -43,8 +42,7 @@ $padding-medium-screen: 5vw;
 // size//
 $card-width: 150px;
 
-//animation
-$animation-delay: 0.2;
+
 
 // images path
 $images-restau: (img-1: url("../images/restaurants/la-palette-du-gout-4402.jpg"),
@@ -54,6 +52,7 @@ $images-restau: (img-1: url("../images/restaurants/la-palette-du-gout-4402.jpg")
 
 // générateur de classe pour les url images background
 //voir si tu peux pas faire une extend 
+//test avec each 
 
 @for $i from 1 through 4 {
     .img_background_#{$i} {
@@ -66,6 +65,45 @@ $images-restau: (img-1: url("../images/restaurants/la-palette-du-gout-4402.jpg")
     }
 }
 
+//animation page-menu
+$animation-delay: 0.2;
+
 //loader
-$rotate: 90deg;
-$delay:0.5s;
+$delay: 0.5s;
+$duration: 2.2s;
+
+$grid-width:1.2vw;
+$grid-height: 6vw;
+
+$final-tilt : (no-tilt: 0deg,
+positive-tilt: 10deg,
+negative-tilt: -10deg);
+
+@each $tilt, $deg in $final-tilt {
+  @keyframes rotation--#{$tilt} {
+    
+    0% {
+        transform: rotate(random(240)+deg); //225
+    }
+
+    33% {
+        transform: rotate(random(180)+deg);
+
+    }
+
+    66% {
+        transform: rotate(random(90)+deg);
+    }
+
+    100% {
+        transform: rotate(map-get($final-tilt, $tilt));
+    }
+  }
+}
+
+    @keyframes loader {
+        100% {
+           opacity: 0;
+            z-index: -5;
+        }
+    }

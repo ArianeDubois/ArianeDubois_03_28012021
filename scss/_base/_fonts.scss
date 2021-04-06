@@ -8,17 +8,24 @@
     font-size: 1.1em;
     font-weight: $weight;
     @include medium-screen-only {
-        font-size: 1.3em;
+        font-size: 1.25em;
     }
 }
 
 @mixin title-section {
     font-weight: bold;
     font-size: 1.7em;
+    @include medium-screen-only {
+        font-size: 1.8em;
+    }
 }
 
 @mixin text-subtitle ($weight) {
     font-size: 1.3em;
     font-weight: $weight;
     line-height: 1.6em;
+
+    @include medium-screen-only {
+        font-size: 1.4em;
+    }
 }
