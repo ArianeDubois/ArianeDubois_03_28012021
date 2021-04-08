@@ -77,9 +77,13 @@
         @include screen-only {
             width: 25%;
             display: flex;
-            justify-content: sp;
+            justify-content: space-between;
             padding: 0 25px 0 0;
         }
+
+&--color{
+    background-color: lighten($first-color, 37%);
+}
 
         &_text {
             @include text-standard(500);
@@ -99,6 +103,9 @@
             margin: 0 20px 0 20px;
             color: lighten(black, 40%);
             font-size: 1.4em;
+            &--color{
+                color: $first-color;
+            }
         }
 
     }
@@ -141,13 +148,20 @@
         overflow: hidden;
         margin: $min-general-margin $general-margin $min-general-margin $general-margin;
         @include box-shadow($grey-shadow);
-
+        &_nouveau{
+            background-color:$thurd-color;
+            color: darken($thurd-color, 30%);
+            padding: 2%;
+                    position: absolute;
+                    top:  3%;
+                    right:  2%;
+        }
+                    @include box-shadow(rgb(53, 52, 52));
         @include medium-screen-only {
 
             margin: $min-general-margin 1vw $min-general-margin 1vw;
             height: 45vw;
-
-        }
+            }
 
         @include screen-only {
             //flex-wrap ne prend pas en charge les poucentages 
@@ -172,9 +186,7 @@
 
     }
 
-}
-
-
+}          
 .restaurants_card_footer {
     height: 10vh;
     position: absolute;
@@ -183,7 +195,6 @@
     border-radius: 0 0 1em 1em;
     width: 100%;
     overflow: hidden;
-
 
     &_text {
         display: flex;
@@ -196,7 +207,7 @@
     .heart_icone {
         position: absolute;
         top: -30%;
-        right: -7%;
+        right: -6%;
 
         @include medium-screen-only {
             top: -13%;
@@ -236,7 +247,7 @@
     width: 100%;
 
     opacity: 0.98;
-    animation: loader 0.01s 3s forwards;
+    animation: loader 0.01s 2.5s forwards;
 
     display: grid;
     grid-template-columns: $grid-width $grid-height/2 $grid-height/3 $grid-width $grid-height/2 $grid-width $grid-height/2 $grid-width $grid-height/3 $grid-height/2 $grid-width;

@@ -65,7 +65,6 @@
 
     <!-- section DISCOVERY -->
     <section class="discovery">
-        <!-- necessité de mettre le form? -->
         <form method="POST" class="discovery_form">
             <i class="fas fa-map-marker-alt"></i>
             <input type="text" class="discovery_form_text" name="location" placeholder=" Paris, Belleville">
@@ -102,11 +101,11 @@
 
                 </article>
 
-                <article class="functioning_card">
+                <article class="functioning_card functioning_card--color">
 
 
                     <h3 class="functioning_card_text"><span class="functioning_card_number">3</span> <span
-                            class="functioning_card_icone"><i class="fas fa-store"></i></span> Dégustez au restaurant
+                            class="functioning_card_icone functioning_card_icone--color"><i class="fas fa-store"></i></span> Dégustez au restaurant
                     </h3>
 
                 </article>
@@ -123,36 +122,42 @@
                 <a href="page2.html">
                     <article class="restaurants_card"><img src="images/restaurants/la-palette-du-gout-4402.jpg"
                             alt="dressage assiette poisson et salade verte">
+                            <span class="restaurants_card_nouveau">Nouveau</span>
                         <div class="restaurants_card_footer">
                             <div class="restaurants_card_footer_text">
                                 <h3>La palette du goût</h3>
                                 <p> Ménilmontant</p>
                             </div>
+                            <!-- clipPath heart (déclaré une fois) -->
+                            <svg>
+                                <clipPath id="heart_icone-svg-path">
+                                    <path d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                                  c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                                  C90.5,46.3,80.7,55.5,80.2,55.9z " />
+                                </clipPath>
+                                   <!-- fin du clipPath heart -->
+                            </svg>  
                                <!-- coeur-->
-                <div class="heart_icone">
-                     <!-- chemin du coeur à detourer (déclaré unse seule fois)-->
-                    <svg>
-                        <clipPath id="heart_icone-svg-path">
-                            <path d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
-                          c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
-                          C90.5,46.3,80.7,55.5,80.2,55.9z " />
-                        </clipPath>
-                    </svg>
-                    <div class="heart_icone-visible">
-                        <svg>
-                            <path id="heart_icone-visible-path-1" d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
-                          c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
-                          C90.5,46.3,80.7,55.5,80.2,55.9z" />
-                        </svg>
-                        <div class="background-radient"> </div>
-                    </div> 
-                </div> <!--fin de heart_icone-->
+                               <div class="heart_icone">
+                                <div class="heart_icone-visible">
+                                    <svg>
+                                        <path id="heart_icone-visible-path-1" d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                                      c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                                      C90.5,46.3,80.7,55.5,80.2,55.9z" />
+                                    </svg>
+                                    <div class="background-radient"> </div>
+                                </div> 
+                            </div> <!--fin de heart_icone-->
+
                         </div><!-- fin de restaurants_card_footer-->
                     </article>
                 </a>
 
                 <a href="page3.html">
-                    <article class="restaurants_card"><img
+                    <article class="restaurants_card">
+                        <span class="restaurants_card_nouveau"> Nouveau</span>
+
+                        <img
                             src="images/restaurants/la-note-enchantee-3024.jpg"
                             alt="assiette de viande blanche en sauce avec ses accompagnements et verre de Spritz">
                         <div class="restaurants_card_footer">
@@ -184,13 +189,17 @@
                                 <h3>À la française</h3>
                                 <p> Cité Rouge</p>
                             </div>
-                                <!-- coeur-->
-                <div class="heart_icone">
-        
-                    <div class="heart_icone-visible">
-                        <div class="background-radient"> </div>
-                    </div> 
-                </div> <!--fin de heart_icone-->
+                          <!-- coeur-->
+                          <div class="heart_icone">
+                            <div class="heart_icone-visible">
+                                <svg>
+                                    <path id="heart_icone-visible-path-3" d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                                  c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                                  C90.5,46.3,80.7,55.5,80.2,55.9z" />
+                                </svg>
+                                <div class="background-radient"> </div>
+                            </div> 
+                        </div> <!--fin de heart_icone-->
                         </div><!-- fin de restaurants_card_footer-->
                     </article>
                 </a>
