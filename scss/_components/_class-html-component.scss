@@ -16,12 +16,19 @@
     padding: 15px;
     border-radius: 2em;
     background: $gradient-color;
-    @include box-shadow(black);
+    @include box-shadow(grey);
     cursor: pointer;
 
-    &:focus{
+    &:hover {
+        box-shadow: 9px 9px 20px -0.4em grey;
+        transition: transform 0.3s;
+        transform: scale(1.05);
+    }
+
+    &:focus {
         outline: none;
     }
+
 }
 
 .container {
@@ -31,12 +38,12 @@
 
     @include screen-only {
 
-     flex-direction: row;
-     justify-content: center;
-     flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
 
     }
-    }
+}
 
 //HEART
 .heart_icone {
@@ -51,13 +58,17 @@
     height: 100px;
     width: 100px;
     transform: scale(0.29);
-    @include medium-screen-only{
+
+    @include medium-screen-only {
         transform: scale(0.4);
 
     }
 }
-
-#heart_icone-visible-path {
+#heart_icone-visible-path,
+#heart_icone-visible-path-1,
+#heart_icone-visible-path-2,
+#heart_icone-visible-path-3,
+#heart_icone-visible-path-4 {
     fill: none;
     stroke: black;
     stroke-width: 1em;

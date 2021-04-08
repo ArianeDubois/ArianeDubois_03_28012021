@@ -32,13 +32,13 @@
 
 @keyframes rotation--no-tilt {
   0% {
-    transform: rotate(157deg);
+    transform: rotate(233deg);
   }
   33% {
-    transform: rotate(83deg);
+    transform: rotate(145deg);
   }
   66% {
-    transform: rotate(22deg);
+    transform: rotate(60deg);
   }
   100% {
     transform: rotate(0deg);
@@ -46,13 +46,13 @@
 }
 @keyframes rotation--positive-tilt {
   0% {
-    transform: rotate(195deg);
+    transform: rotate(170deg);
   }
   33% {
-    transform: rotate(90deg);
+    transform: rotate(76deg);
   }
   66% {
-    transform: rotate(23deg);
+    transform: rotate(29deg);
   }
   100% {
     transform: rotate(10deg);
@@ -60,13 +60,13 @@
 }
 @keyframes rotation--negative-tilt {
   0% {
-    transform: rotate(72deg);
+    transform: rotate(193deg);
   }
   33% {
-    transform: rotate(123deg);
+    transform: rotate(80deg);
   }
   66% {
-    transform: rotate(11deg);
+    transform: rotate(18deg);
   }
   100% {
     transform: rotate(-10deg);
@@ -118,13 +118,11 @@ a {
   padding: 15px;
   border-radius: 2em;
   background: linear-gradient(#FF79DA, #a16be0);
-  box-shadow: 9px 9px 15px -0.5em grey;
   cursor: pointer;
 }
 .button:hover {
-  box-shadow: 9px 9px 20px -0.4em grey;
-  transition: transform 0.3s;
-  transform: scale(1.05);
+  box-shadow: 8px 8px 20px -0.8em black;
+  transform: scale(1.2);
 }
 .button:focus {
   outline: none;
@@ -161,11 +159,7 @@ a {
   }
 }
 
-#heart_icone-visible-path,
-#heart_icone-visible-path-1,
-#heart_icone-visible-path-2,
-#heart_icone-visible-path-3,
-#heart_icone-visible-path-4 {
+#heart_icone-visible-path {
   fill: none;
   stroke: black;
   stroke-width: 1em;
@@ -276,14 +270,12 @@ a {
   border-radius: 1.5em;
   margin: 4vmin 5vmin 4vmin 30px;
   position: relative;
-  box-shadow: 9px 9px 15px -0.5em #9e9d9d;
+  box-shadow: 5px 5px 30px -0.8em #9e9d9d;
 }
 @media (min-width: 1400px) {
   .functioning_card {
     width: 25%;
-    display: flex;
-    justify-content: sp;
-    padding: 0 25px 0 0;
+    padding: 0;
   }
 }
 .functioning_card_text {
@@ -335,7 +327,7 @@ a {
   position: relative;
   overflow: hidden;
   margin: 4vmin 5vmin 4vmin 5vmin;
-  box-shadow: 9px 9px 15px -0.5em #9e9d9d;
+  box-shadow: 5px 5px 30px -0.8em #9e9d9d;
 }
 @media (min-width: 599px) {
   .restaurants_card {
@@ -350,21 +342,18 @@ a {
     height: 22vw;
   }
 }
+.restaurants_card--reframe img {
+  object-position: 0 -170px;
+}
 .restaurants_card img {
   width: 100%;
   border-radius: 1em;
   height: auto;
   object-fit: cover;
-  object-position: 0 -30px;
-}
-@media (min-width: 1400px) {
-  .restaurants_card img {
-    object-position: 0 -100px;
-  }
 }
 
 .restaurants_card_footer {
-  height: 10vh;
+  height: 30%;
   position: absolute;
   bottom: 0;
   background-color: white;
@@ -372,27 +361,11 @@ a {
   width: 100%;
   overflow: hidden;
 }
-.restaurants_card_footer_text {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  padding: 1% 12px 0 12px;
-  margin: 0;
-}
-.restaurants_card_footer .heart_icone {
-  position: absolute;
-  top: -30%;
-  right: -7%;
-}
-@media (min-width: 599px) {
-  .restaurants_card_footer .heart_icone {
-    top: -13%;
-    right: 0;
-  }
-}
 .restaurants_card_footer h3 {
-  line-height: 2em;
-  margin: 0;
+  padding: 0 12px 0 12px;
+  margin: 5% 0 0.3em 0;
+  display: flex;
+  justify-content: space-between;
   font-size: 1.1em;
   font-weight: 700;
 }
@@ -402,7 +375,8 @@ a {
   }
 }
 .restaurants_card_footer p {
-  margin: 0;
+  padding-left: 12px;
+  margin: 0 0 5% 0;
   font-size: 1.1em;
   font-weight: 100;
 }
@@ -411,103 +385,30 @@ a {
     font-size: 1.25em;
   }
 }
-
-.loader {
-  justify-content: center;
-  align-content: center;
-  background-color: whitesmoke;
-  position: fixed;
-  z-index: 3;
-  height: 100%;
-  width: 100%;
-  opacity: 0.98;
-  animation: loader 0.01s 3s forwards;
-  display: grid;
-  grid-template-columns: 1.2vmax 3vmax 2vmax 1.2vmax 3vmax 1.2vmax 3vmax 1.2vmax 2vmax 3vmax 1.2vmax;
-  grid-template-rows: 3vmax 1.2vmax 3vmax 1.2vmax 6vmax;
-  grid-gap: 0.2vw;
+.restaurants_card_footer_icone {
+  position: relative;
 }
-.loader_text {
-  color: #9356DC;
-  width: 100%;
-  text-align: center;
+.restaurants_card_footer_icone .icone-1 {
+  color: linear-gradient(#FF79DA, #a16be0);
+  transition: opacity 0.2s;
+}
+.restaurants_card_footer_icone .icone-2 {
   position: absolute;
-  bottom: 0;
-  font-size: 1.1em;
-  font-weight: 400;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: -webkit-linear-gradient(#FF79DA, #a16be0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
+  transition: transform opacity 0.5s;
 }
-@media (min-width: 599px) {
-  .loader_text {
-    font-size: 1.25em;
-  }
+.restaurants_card_footer_icone:hover .icone-1 {
+  opacity: 0;
 }
-
-.rectangle {
-  border-radius: 0.9em;
-  background-color: #9356DC;
-  box-shadow: -1px -1px 5px 0.01em silver;
-}
-
-.pied-1 {
-  grid-column: 8/9;
-  grid-row: 5/6;
-  animation: rotation--positive-tilt 2.4s 0.5s both;
-}
-
-.pied-2 {
-  grid-column: 11/12;
-  grid-row: 5/6;
-  animation: rotation--negative-tilt 2s 0.5s both;
-}
-
-.assise {
-  grid-column: 9/11;
-  grid-row: 4/5;
-  animation: rotation--no-tilt 2s 0.5s both;
-}
-
-.dossier {
-  grid-column: 11/12;
-  grid-row: 1/4;
-  animation: rotation--positive-tilt 2s 0.5s both;
-}
-
-.pied-gauche-1 {
-  grid-column: 1/2;
-  grid-row: 5/6;
-  animation: rotation--positive-tilt 2s 0.5s both;
-}
-
-.pied-gauche-2 {
-  grid-column: 4/5;
-  grid-row: 5/6;
-  animation: rotation--negative-tilt 2s 0.5s both;
-}
-
-.assise-gauche {
-  grid-column: 2/4;
-  grid-row: 4/5;
-  transform: rotate(0deg);
-  animation: rotation--no-tilt 2s 0.5s both;
-}
-
-.dossier-gauche {
-  grid-column: 1/2;
-  grid-row: 1/4;
-  animation: rotation--negative-tilt 2.6s 0.5s both;
-}
-
-.table {
-  grid-column: 3/10;
-  grid-row: 2/3;
-  transform: rotate(0deg);
-  animation: rotation--no-tilt 2.3s 0.5s both;
-}
-
-.pied-table {
-  grid-column: 6/7;
-  grid-row: 3/6;
-  animation: rotation--no-tilt 2s 0.5s both;
+.restaurants_card_footer_icone:hover .icone-2 {
+  opacity: 1;
+  z-index: 1;
 }
 
 @media (min-width: 599px) {
@@ -601,7 +502,7 @@ a {
 .menu_card {
   background-color: white;
   border-radius: 1.5em;
-  box-shadow: 9px 9px 15px -0.5em #9e9d9d;
+  box-shadow: 5px 5px 30px -0.8em #9e9d9d;
   display: flex;
   justify-content: space-between;
   align-items: center;

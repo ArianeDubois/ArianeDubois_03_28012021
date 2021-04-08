@@ -21,7 +21,7 @@
             @include text-standard(100);
 
             @include screen-only {
-                // regler la visibilité de la barre de recherhcz//
+                // regler la visibilité de la barre de recherhe sous le titre//
                 margin-top: 70px;
             }
 
@@ -223,12 +223,7 @@
 
 }
 
-
-
 //loader
-//racourcir c'est trop long !!!
-
- 
 .loader {
 
     justify-content: center;
@@ -237,106 +232,98 @@
     position: fixed;
     z-index: 3;
 
-    height:100%;
+    height: 100%;
     width: 100%;
-    
-    opacity: 0.98;
-   animation: loader 0.01s 2.8s forwards;
 
-     display: grid;
-     grid-template-columns: $grid-width $grid-height/2  $grid-height/3 $grid-width $grid-height/2 $grid-width $grid-height/2 $grid-width $grid-height/3  $grid-height/2 $grid-width;
-     grid-template-rows: $grid-height/2 $grid-width $grid-height/2 $grid-width $grid-height;
-     grid-gap: 0.2vw;
+    opacity: 0.98;
+    animation: loader 0.01s 3s forwards;
+
+    display: grid;
+    grid-template-columns: $grid-width $grid-height/2 $grid-height/3 $grid-width $grid-height/2 $grid-width $grid-height/2 $grid-width $grid-height/3 $grid-height/2 $grid-width;
+    grid-template-rows: $grid-height/2 $grid-width $grid-height/2 $grid-width $grid-height;
+    grid-gap: 0.2vw;
 
     &_text {
-        color:$first-color;
+        color: $first-color;
         width: 100%;
         text-align: center;
-position: absolute;
-bottom: 0;
-        @include text-standard(400);  
+        position: absolute;
+        bottom: 0;
+        @include text-standard(400);
 
-  }
+    }
 }
-   
-   .rectangle {
-       border-radius: 0.9em;
-       background-color: $first-color;
-       box-shadow: -1px -1px 5px 0.01em lighten(grey, 25%);
-   }
-   
-   .pied-1 {
-       grid-column: 8/9;
-     grid-row:  5/6 ;
-    animation: rotation--positive-tilt $duration $delay both;
-   
-   }
-     
-   .pied-2 {
-   grid-column: 11/12;
-     grid-row:  5/6 ;
+
+//mettre un random sur la duration 
+.rectangle {
+    border-radius: 0.9em;
+    background-color: $first-color;
+    box-shadow: -1px -1px 5px 0.01em lighten(grey, 25%);
+}
+
+.pied-1 {
+    grid-column: 8/9;
+    grid-row: 5/6;
+    animation: rotation--positive-tilt $duration+0.4s $delay both;
+
+}
+
+.pied-2 {
+    grid-column: 11/12;
+    grid-row: 5/6;
     animation: rotation--negative-tilt $duration $delay both;
-   
-   
-   
-   }
-       
-   .assise {
-       grid-column: 9/11;
-     grid-row:  4/5 ;
+}
+
+.assise {
+    grid-column: 9/11;
+    grid-row: 4/5;
     animation: rotation--no-tilt $duration $delay both;
-   }
-   
-   .dossier {
-      grid-column: 11/12;
-     grid-row:  1/4 ;
+}
+
+.dossier {
+    grid-column: 11/12;
+    grid-row: 1/4;
     animation: rotation--positive-tilt $duration $delay both;
-   }
-   
-   .pied-gauche-1 {
-   grid-column: 1/2;
-     grid-row:  5/6 ;
+}
+
+.pied-gauche-1 {
+    grid-column: 1/2;
+    grid-row: 5/6;
     animation: rotation--positive-tilt $duration $delay both;
-   
-   }
-   
-   .pied-gauche-2 {
+
+}
+
+.pied-gauche-2 {
     grid-column: 4/5;
-     grid-row:  5/6 ;
-      animation: rotation--negative-tilt $duration $delay both;
-   }
-   
-   
-   .assise-gauche {
-     grid-column: 2/4;
-     grid-row:  4/5 ;
+    grid-row: 5/6;
+    animation: rotation--negative-tilt $duration $delay both;
+}
+
+
+.assise-gauche {
+    grid-column: 2/4;
+    grid-row: 4/5;
     transform: rotate(0deg);
     animation: rotation--no-tilt $duration $delay both;
-   }
-   
-   .dossier-gauche {
-   
-       grid-column: 1/2;
-     grid-row:  1/4 ;  
-      animation: rotation--negative-tilt $duration $delay both;
-   }
-   
-   .table {
-     grid-column: 3/10;
-     grid-row:  2/3 ;
+}
+
+.dossier-gauche {
+
+    grid-column: 1/2;
+    grid-row: 1/4;
+    animation: rotation--negative-tilt $duration+0.6s $delay both;
+}
+
+.table {
+    grid-column: 3/10;
+    grid-row: 2/3;
     transform: rotate(0deg);
+    animation: rotation--no-tilt $duration+0.3s $delay both;
+}
+
+.pied-table {
+    //  transform-origin: (0);
+    grid-column: 6/7;
+    grid-row: 3/6;
     animation: rotation--no-tilt $duration $delay both;
-   }
-   
-   .pied-table {
-     //  transform-origin: (0);
-   grid-column: 6/7 ;
-   grid-row:  3/6 ;
-     animation: rotation--no-tilt $duration $delay both;
-   }
-   
-   
-   
-   
-   
-   
+}

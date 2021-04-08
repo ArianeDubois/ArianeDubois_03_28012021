@@ -36,7 +36,7 @@ $padding-medium-screen: 5vw;
 
 
 @mixin box-shadow ($color) {
-    box-shadow: 5px 5px 30px -0.8em $color;
+    box-shadow: 9px 9px 15px -0.5em $color;
 }
 
 // size//
@@ -70,10 +70,11 @@ $animation-delay: 0.2;
 
 //loader
 $delay: 0.5s;
-$duration: 2.2s;
+$duration: 2s;
 
-$grid-width:1.2vw;
-$grid-height: 6vw;
+//--modules size--
+$grid-width:1.2vmax;
+$grid-height: 6vmax;
 
 $final-tilt : (no-tilt: 0deg,
 positive-tilt: 10deg,

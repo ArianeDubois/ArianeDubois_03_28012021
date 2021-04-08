@@ -9,16 +9,10 @@
 
     box-shadow: 0 15px 25px -1.4em $grey-shadow;
     @include screen-only {
-
-        // ! on ne retrouve plus la barre du dessous du coup//
-
-        position: fixed;
+ 
+     position: fixed;
         background-color: white;
         width:100%;
-
-
-   
-
     }
 
 
