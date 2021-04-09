@@ -1,5 +1,6 @@
 $medium-breakpoints:  599px;
-$screen-breakpoints:  1400px;
+$little-screen-breakpoints:  1000px;
+$screen-breakpoints:  1300px;
 
 
 
@@ -13,6 +14,11 @@ $screen-breakpoints:  1400px;
 
 @mixin medium-screen-only{
    @media (min-width: $medium-breakpoints) { @content;
+}
+}
+
+@mixin little-screen-only{
+   @media (min-width: $little-screen-breakpoints) { @content;
 }
 }
 

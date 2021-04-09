@@ -15,12 +15,11 @@ $gradient-color-light:  linear-gradient($second-color, lighten($first-color, 8%)
 $pad-top-section: 30px;
 $pad-end-section: 50px;
 
-$pad-container-text: 12px;
+$pad-container-text: 2vw;
 $general-margin: 5vmin;
 $min-general-margin: 4vmin;
 
 $padding-screen: 13vw;
-
 $padding-medium-screen: 5vw;
 
 @mixin space-section{
@@ -45,16 +44,15 @@ $card-width: 150px;
 
 
 
-// images path
+// images url
 $images-restau: (img-1: url("../images/restaurants/la-palette-du-gout-4402.jpg"),
     img-2: url("../images/restaurants/la-note-enchantee-3024.jpg"),
     img-3: url("../images/restaurants/a-la-francaise-3936.jpg"),
     img-4: url("../images/restaurants/le-delice-des-sens-3641.jpg"));
 
-// générateur de classe pour les url images background
-//voir si tu peux pas faire une extend 
-//test avec each 
 
+
+// générateur de classe pour les url images background
 @for $i from 1 through 4 {
     .img_background_#{$i} {
         background-image: map-get($images-restau, img-#{$i});

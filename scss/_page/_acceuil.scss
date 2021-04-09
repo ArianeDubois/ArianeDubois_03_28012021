@@ -60,33 +60,37 @@
     .container {
         display: flex;
         justify-content: space-between;
-
     }
 
     &_card {
-
-
+       
         background-color: $grey-section;
-        padding: $pad-container-text;
+       padding-right: $pad-container-text;
         border-radius: 1.5em;
+        //il faut plus de marge à gauche pour la bulle numerotée
         margin: $min-general-margin $general-margin $min-general-margin 30px;
         position: relative;
 
-        @include box-shadow($grey-shadow);
+        @include box-shadow ($grey-shadow);
 
+      
         @include screen-only {
-            width: 25%;
+            min-width: 25%;
             display: flex;
-            justify-content: space-between;
+          justify-content: space-between;
             padding: 0 25px 0 0;
         }
 
-&--color{
-    background-color: lighten($first-color, 37%);
-}
+        &--color {
+            background-color: lighten($first-color, 37%);
+        }
 
         &_text {
             @include text-standard(500);
+            text-overflow: ellipsis;
+            overflow: hidden;
+           margin-left: 30px;
+           white-space: nowrap;
         }
 
         &_number {
@@ -103,7 +107,8 @@
             margin: 0 20px 0 20px;
             color: lighten(black, 40%);
             font-size: 1.4em;
-            &--color{
+
+            &--color {
                 color: $first-color;
             }
         }
@@ -111,64 +116,54 @@
     }
 }
 
+//restaurants
 
 .restaurants {
-
 
     @include space-section;
     background-color: $grey-section;
 
     //padding-left
-
     @include medium-screen-only {
-        @include space-section-medium-screen;
-    }
+      @include space-section-medium-screen;
+  }
 
     @include screen-only {
         @include space-section-screen;
-
     }
 
-
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-
-
-    }
 
     &_card {
-
         height: 60vmin;
         object-fit: contain;
         border-radius: 1em;
-
         position: relative;
         overflow: hidden;
         margin: $min-general-margin $general-margin $min-general-margin $general-margin;
         @include box-shadow($grey-shadow);
-        &_nouveau{
-            background-color:$thurd-color;
-            color: darken($thurd-color, 30%);
-            padding: 2%;
-                    position: absolute;
-                    top:  3%;
-                    right:  2%;
-        }
-                    @include box-shadow(rgb(53, 52, 52));
-        @include medium-screen-only {
 
+        &_nouveau {
+            background-color: $thurd-color;
+            color: darken($thurd-color, 30%);
+            box-shadow: 6px 6px 8px -0.5em black;
+            padding: 2%;
+            position: absolute;
+            top: 3%;
+            right: 2%;
+        }
+
+        @include box-shadow($grey-shadow);
+
+        @include medium-screen-only {
             margin: $min-general-margin 1vw $min-general-margin 1vw;
             height: 45vw;
-            }
+        }
 
-        @include screen-only {
-            //flex-wrap ne prend pas en charge les poucentages 
-            margin: $min-general-margin 1vw $min-general-margin 1vw;
+        @include little-screen-only {
+                        //flex-wrap ne prend pas en charge les poucentages 
 
-            width: 33.3vw;
             height: 22vw;
+            width: 33.3vw;
         }
 
         img {
@@ -186,7 +181,8 @@
 
     }
 
-}          
+}
+
 .restaurants_card_footer {
     height: 10vh;
     position: absolute;
@@ -217,18 +213,12 @@
 
     h3 {
         line-height: 2em;
-        ;
         margin: 0;
-        //  padding: 0 $pad-container-text 0 $pad-container-text;
-        // margin: 5% 0 0.3em 0;
-
         @include text-standard(700);
     }
 
     p {
         margin: 0;
-        //   padding-left: $pad-container-text;
-        //   margin: 0 0 5% 0;
         @include text-standard(100);
     }
 
@@ -265,7 +255,6 @@
     }
 }
 
-//mettre un random sur la duration 
 .rectangle {
     border-radius: 0.9em;
     background-color: $first-color;
