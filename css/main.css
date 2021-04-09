@@ -32,13 +32,13 @@
 
 @keyframes rotation--no-tilt {
   0% {
-    transform: rotate(30deg);
+    transform: rotate(35deg);
   }
   33% {
     transform: rotate(145deg);
   }
   66% {
-    transform: rotate(3deg);
+    transform: rotate(44deg);
   }
   100% {
     transform: rotate(0deg);
@@ -46,13 +46,13 @@
 }
 @keyframes rotation--positive-tilt {
   0% {
-    transform: rotate(48deg);
+    transform: rotate(148deg);
   }
   33% {
-    transform: rotate(88deg);
+    transform: rotate(162deg);
   }
   66% {
-    transform: rotate(82deg);
+    transform: rotate(68deg);
   }
   100% {
     transform: rotate(10deg);
@@ -60,13 +60,13 @@
 }
 @keyframes rotation--negative-tilt {
   0% {
-    transform: rotate(96deg);
+    transform: rotate(75deg);
   }
   33% {
-    transform: rotate(178deg);
+    transform: rotate(88deg);
   }
   66% {
-    transform: rotate(49deg);
+    transform: rotate(54deg);
   }
   100% {
     transform: rotate(-10deg);
@@ -218,7 +218,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  padding: 2vw;
+  padding: 1.4vw;
   background-color: #e9e9e9;
 }
 .discovery_form_text {
@@ -272,9 +272,14 @@ a {
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 1300px) {
+  .functioning {
+    padding: 30px 13vw 50px 13vw;
+  }
+}
 .functioning_card {
   background-color: whitesmoke;
-  padding-right: 2vw;
+  padding-right: 1.4vw;
   border-radius: 1.5em;
   margin: 4vmin 5vmin 4vmin 30px;
   position: relative;
@@ -358,13 +363,19 @@ a {
 @media (min-width: 599px) {
   .restaurants_card {
     margin: 4vmin 1vw 4vmin 1vw;
-    height: 45vw;
+    height: 45vmax;
   }
 }
 @media (min-width: 1000px) {
   .restaurants_card {
-    height: 22vw;
-    width: 33.3vw;
+    height: 22vmax;
+    width: 33vmax;
+  }
+}
+@media (min-width: 1300px) {
+  .restaurants_card {
+    height: 20vmax;
+    width: 33.3vmax;
   }
 }
 .restaurants_card img {
@@ -372,16 +383,11 @@ a {
   border-radius: 1em;
   height: auto;
   object-fit: cover;
-  object-position: 0 -30px;
-}
-@media (min-width: 1300px) {
-  .restaurants_card img {
-    object-position: 0 -100px;
-  }
+  object-position: 0 -5vw;
 }
 
 .restaurants_card_footer {
-  height: 10vh;
+  height: 33%;
   position: absolute;
   bottom: 0;
   background-color: white;
@@ -393,7 +399,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  padding: 1% 2vw 0 2vw;
+  padding: 1vw 1.4vw 0 1.4vw;
   margin: 0;
 }
 .restaurants_card_footer .heart_icone {
@@ -754,11 +760,15 @@ main {
   background-color: #333333;
   color: #e6e6e6;
 }
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
   .footer {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+  }
+}
+@media (min-width: 1300px) {
+  .footer {
     padding: 0 13vw 0 13vw;
   }
 }

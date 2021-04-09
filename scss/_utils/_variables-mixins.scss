@@ -12,15 +12,19 @@ $gradient-color-light:  linear-gradient($second-color, lighten($first-color, 8%)
 //layout
 
 // space//
+
+//revoir les noms (little medium...)
 $pad-top-section: 30px;
 $pad-end-section: 50px;
 
-$pad-container-text: 2vw;
+$pad-container-text: 1.4vw;
 $general-margin: 5vmin;
 $min-general-margin: 4vmin;
 
 $padding-screen: 13vw;
 $padding-medium-screen: 5vw;
+$padding-little-screen: 8vw;
+
 
 @mixin space-section{
     padding: $pad-top-section 0 $pad-end-section 0;
@@ -34,6 +38,9 @@ $padding-medium-screen: 5vw;
     padding: $pad-top-section $padding-screen $pad-end-section $padding-screen;
 }
 
+@mixin space-section-little-screen{
+    padding: 0 $padding-little-screen  0 $padding-little-screen ;
+}
 
 @mixin box-shadow ($color) {
     box-shadow: 9px 9px 15px -0.5em $color;

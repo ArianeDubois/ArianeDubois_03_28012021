@@ -61,6 +61,12 @@
         display: flex;
         justify-content: space-between;
     }
+   
+
+
+           
+    @include screen-only {
+       @include space-section-screen;}
 
     &_card {
        
@@ -72,8 +78,8 @@
         position: relative;
 
         @include box-shadow ($grey-shadow);
+     
 
-      
         @include screen-only {
             min-width: 25%;
             display: flex;
@@ -134,6 +140,7 @@
 
 
     &_card {
+       
         height: 60vmin;
         object-fit: contain;
         border-radius: 1em;
@@ -156,35 +163,31 @@
 
         @include medium-screen-only {
             margin: $min-general-margin 1vw $min-general-margin 1vw;
-            height: 45vw;
+            height: 45vmax;
         }
 
         @include little-screen-only {
-                        //flex-wrap ne prend pas en charge les poucentages 
-
-            height: 22vw;
-            width: 33.3vw;
+            height: 22vmax;
+            width: 33vmax;
         }
+        @include screen-only {
+            height: 20vmax;
+width: 33.3vmax;
+}
 
         img {
             width: 100%;
             border-radius: 1em;
             height: auto;
             object-fit: cover;
-            object-position: 0 -30px;
-
-            @include screen-only {
-                object-position: 0 -100px;
-            }
-
+            object-position: 0 -5vw;
         }
-
     }
-
 }
+// attention responsive ipad pro 
 
 .restaurants_card_footer {
-    height: 10vh;
+    height: 33%;
     position: absolute;
     bottom: 0;
     background-color: white;
@@ -196,7 +199,7 @@
         display: flex;
         flex-direction: column;
         justify-items: center;
-        padding: 1% $pad-container-text 0 $pad-container-text;
+        padding: 1vw $pad-container-text 0 $pad-container-text;
         margin: 0;
     }
 

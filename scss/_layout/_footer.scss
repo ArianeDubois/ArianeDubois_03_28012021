@@ -5,13 +5,16 @@
     background-color: lighten(black, 20%);
     color: darken(white, 10%);
 
-    @include screen-only {
+    @include little-screen-only {
 display: flex;
 justify-content: space-between;
 align-items: baseline;
-padding: 0 $padding-screen  0 $padding-screen;
-    }
+}
+    
 
+    @include screen-only {
+        padding: 0 $padding-screen  0 $padding-screen;
+            }
     
     &_logo {
         @include font-logo();
