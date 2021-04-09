@@ -57,8 +57,7 @@
         .heart_icone {
             position: absolute;
             top: 2vw;
-            right: 0;
-
+            
             @include screen-only {
                 right: 11.5vw;
             }

@@ -32,13 +32,13 @@
 
 @keyframes rotation--no-tilt {
   0% {
-    transform: rotate(35deg);
+    transform: rotate(97deg);
   }
   33% {
-    transform: rotate(145deg);
+    transform: rotate(23deg);
   }
   66% {
-    transform: rotate(44deg);
+    transform: rotate(11deg);
   }
   100% {
     transform: rotate(0deg);
@@ -46,13 +46,13 @@
 }
 @keyframes rotation--positive-tilt {
   0% {
-    transform: rotate(148deg);
+    transform: rotate(212deg);
   }
   33% {
-    transform: rotate(162deg);
+    transform: rotate(117deg);
   }
   66% {
-    transform: rotate(68deg);
+    transform: rotate(36deg);
   }
   100% {
     transform: rotate(10deg);
@@ -60,13 +60,13 @@
 }
 @keyframes rotation--negative-tilt {
   0% {
-    transform: rotate(75deg);
+    transform: rotate(26deg);
   }
   33% {
     transform: rotate(88deg);
   }
   66% {
-    transform: rotate(54deg);
+    transform: rotate(8deg);
   }
   100% {
     transform: rotate(-10deg);
@@ -140,7 +140,6 @@ a {
   .container {
     flex-direction: row;
     justify-content: space-between;
-    margin: auto;
     flex-wrap: wrap;
   }
 }
@@ -153,9 +152,9 @@ a {
   overflow: hidden;
   position: relative;
   clip-path: url(#heart_icone-svg-path);
-  height: 100px;
-  width: 100px;
-  transform: scale(0.29);
+  height: 110px;
+  width: 120px;
+  transform: scale(0.28);
 }
 @media (min-width: 599px) {
   .heart_icone-visible {
@@ -594,7 +593,6 @@ a {
 .page_header .heart_icone {
   position: absolute;
   top: 2vw;
-  right: 0;
 }
 @media (min-width: 1300px) {
   .page_header .heart_icone {

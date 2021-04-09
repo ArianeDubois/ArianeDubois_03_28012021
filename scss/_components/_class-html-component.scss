@@ -40,9 +40,7 @@
     @include little-screen-only {
 
         flex-direction: row;
-        //! center avant 
         justify-content: space-between;
-        margin: auto;
         flex-wrap: wrap;
 
     }
@@ -57,10 +55,10 @@
     overflow: hidden;
     position: relative;
     clip-path: url(#heart_icone-svg-path);
-    //taille du background;
-    height: 100px;
-    width: 100px;
-    transform: scale(0.29);
+    //revoir la taille pour les menu 
+    height: 110px;
+    width: 120px;
+    transform: scale(0.28);
 
     @include medium-screen-only {
         transform: scale(0.4);
