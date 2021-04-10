@@ -3,10 +3,10 @@
 .header {
     display: flex;
     justify-content: space-around;
-    // y , x, blur, spread//
+  
     position: relative;
     z-index: 2;
-
+  // y , x, blur, spread//
     box-shadow: 0 15px 25px -1.4em $grey-shadow;
     @include screen-only {
  

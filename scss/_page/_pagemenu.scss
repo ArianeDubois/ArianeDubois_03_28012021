@@ -148,7 +148,7 @@
         p {
             @include text-standard(100);
             margin: 0;
-            // //hyphenated text (inline-element only))
+            //hyphenated text (inline-element only))
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;

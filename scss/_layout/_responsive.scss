@@ -2,11 +2,6 @@ $medium-breakpoints:  599px;
 $little-screen-breakpoints:  1000px;
 $screen-breakpoints:  1300px;
 
-
-
-// mixin avec les propriétées responsive, après tu mets un include dans les sections
-// ---> @include screen-only { le contenu du responsive}
-
  @mixin screen-only{
     @media (min-width: $screen-breakpoints) { @content;
  }

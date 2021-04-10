@@ -5,15 +5,13 @@ $thurd-color: #99E2D0;
 $grey-section: lighten(grey, 46%);
 $grey-shadow: #9e9d9d;
 
-
-$gradient-color:  linear-gradient($second-color, $first-color);
-$gradient-color-light:  linear-gradient($second-color, lighten($first-color, 8%));
+$gradient-color: linear-gradient($second-color, $first-color);
+$gradient-color-light: linear-gradient($second-color, lighten($first-color, 8%));
 
 //layout
 
 // space//
 
-//revoir les noms (little medium...)
 $pad-top-section: 30px;
 $pad-end-section: 50px;
 
@@ -24,15 +22,16 @@ $min-general-margin: 4vmin;
 $padding-screen: 13vw;
 
 
-@mixin space-section{
+@mixin space-section {
     padding: $pad-top-section 0 $pad-end-section 0;
 }
+
 //padding-section 
-@mixin space-section-screen{
+@mixin space-section-screen {
     padding: $pad-top-section $padding-screen $pad-end-section $padding-screen;
 }
 
-@mixin space-section-medium-screen{
+@mixin space-section-medium-screen {
     padding: $pad-top-section $padding-screen $pad-end-section $padding-screen;
 }
 
@@ -73,35 +72,36 @@ $grid-width:1.2vmax;
 $grid-height: 6vmax;
 
 $final-tilt : (no-tilt: 0deg,
-positive-tilt: 10deg,
-negative-tilt: -10deg);
+    positive-tilt: 10deg,
+    negative-tilt: -10deg);
 
 //une inclinaison différente pour chaque module de la map tilt
-@each $tilt, $deg in $final-tilt {
-  @keyframes rotation--#{$tilt} {
-    
-    0% {
-        transform: rotate(random(240)+deg); 
-    }
+@each $tilt,
+$deg in $final-tilt {
+    @keyframes rotation--#{$tilt} {
 
-    33% {
-        transform: rotate(random(180)+deg);
+        0% {
+            transform: rotate(random(240)+deg);
+        }
 
-    }
+        33% {
+            transform: rotate(random(180)+deg);
 
-    66% {
-        transform: rotate(random(90)+deg);
-    }
+        }
 
-    100% {
-        transform: rotate(map-get($final-tilt, $tilt));
-    }
-  }
-}
+        66% {
+            transform: rotate(random(90)+deg);
+        }
 
-    @keyframes loader {
         100% {
-           opacity: 0;
-            z-index: -5;
+            transform: rotate(map-get($final-tilt, $tilt));
         }
     }
+}
+
+@keyframes loader {
+    100% {
+        opacity: 0;
+        z-index: -5;
+    }
+}
