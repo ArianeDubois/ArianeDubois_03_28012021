@@ -56,8 +56,8 @@
     position: relative;
     // path for the shape clipping, mentionned in html acceuil page
     clip-path: url(#heart_icone-svg-path);
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     transform: scale(0.28);
 
     @include tablette-screen-only {

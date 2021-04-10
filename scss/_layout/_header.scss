@@ -15,15 +15,17 @@
         width:100%;
     }
 
-
     .header_logo {
         text-align: center;
         @include font-logo;
         font-size: 2em;
-        margin: 7px;
+       margin: 5px;
+        @include screen-only {
+ 
+        margin: 10px;
 
 }
     }
 
-
+}
 
