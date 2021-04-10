@@ -17,7 +17,7 @@ align-items: baseline;
             }
     
     &_logo {
-        @include font-logo();
+        @include font-logo;
     }
 
     &_text {

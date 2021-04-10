@@ -1,29 +1,33 @@
-.img_background_1, .img_background_3, .img_background_4{
+// header
+.img_background_1,
+.img_background_3,
+.img_background_4 {
 
-    @include medium-screen-only {
-      background-position: 0 -14vw;
+    @include tablette-screen-only {
+        background-position: 0 -14vw;
     }
 }
 
-.img_background_4{
-   
-    @include medium-screen-only {
+.img_background_4 {
+
+    @include tablette-screen-only {
         background-position: 0 -20vw;
-      }
+    }
 }
 
-.img_background_3{
+.img_background_3 {
     background-position: 0 -8vw;
 
-    @include medium-screen-only {
+    @include tablette-screen-only {
         background-position: 0 -20vw;
-      }
+    }
 }
 
-.img_background_2{
-  background-position: 0 -40vw;
+.img_background_2 {
+    background-position: 0 -40vw;
 
 }
+
 .return_icone {
     position: absolute;
     top: 30px;
@@ -31,12 +35,13 @@
     font-size: 0.7em;
 }
 
+// Page menu 
 .page {
-    background-color:$grey-section;
+    background-color: $grey-section;
     border-radius: 3em 3em 0 0;
     padding: $general-margin;
-   margin-top: -70px;
-   position: relative;
+    margin-top: -70px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,18 +51,20 @@
         @include space-section-screen;
     }
 
+    // title section
     &_header {
 
         &_name {
             @include font-logo;
             position: relative;
-          @include title-section;
+            @include title-section;
         }
 
         .heart_icone {
             position: absolute;
             top: 2vw;
-            
+            right: 0;
+
             @include screen-only {
                 right: 11.5vw;
             }
@@ -86,20 +93,18 @@
         text-transform: uppercase;
     }
 
-
     &_card {
         background-color: white;
         border-radius: 1.5em;
         @include box-shadow ($grey-shadow);
         display: flex;
-
         justify-content: space-between;
         align-items: center;
         height: 90px;
         overflow: hidden;
         margin: $general-margin 0 $general-margin 0;
 
-        //animation apparition  calc(#{$i}s * #{$animation-delay})
+        //appearance animation
         @for $i from 1 to 5 {
 
             &--#{$i} {
@@ -131,7 +136,7 @@
                 flex-grow: 1;
                 width: 100%;
                 margin: 0;
-
+                //hyphenated text
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
@@ -142,7 +147,7 @@
         p {
             @include text-standard(100);
             margin: 0;
-            //ellipse que sur les éléments inline
+            // //hyphenated text (inline-element only))
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
@@ -172,26 +177,20 @@
             }
         }
 
-      &:hover .menu_card_anim-confirm {
+        &:hover .menu_card_anim-confirm {
 
-          width: 35%;
-       }
+            width: 35%;
+        }
 
 
         &:hover .menu_card_anim-confirm-icone {
             animation: rotate-icone 0.4s linear;
 
         }
-
-
     }
 
 }
 
-main {
-    background-color: $grey-section;
-
-}
 // animations 
 @keyframes rotate-icone {
 

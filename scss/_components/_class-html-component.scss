@@ -54,17 +54,18 @@
 .heart_icone-visible {
     overflow: hidden;
     position: relative;
+    // path for the shape clipping, mentionned in html acceuil page
     clip-path: url(#heart_icone-svg-path);
-    //revoir la taille pour les menu 
-    height: 110px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     transform: scale(0.28);
 
-    @include medium-screen-only {
+    @include tablette-screen-only {
         transform: scale(0.4);
 
     }
 }
+//second shade, visible in the foreground (premier plan)
 #heart_icone-visible-path,
 #heart_icone-visible-path-1,
 #heart_icone-visible-path-2,

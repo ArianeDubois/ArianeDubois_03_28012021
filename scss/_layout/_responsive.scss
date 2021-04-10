@@ -12,7 +12,7 @@ $screen-breakpoints:  1300px;
  }
 }
 
-@mixin medium-screen-only{
+@mixin tablette-screen-only{
    @media (min-width: $medium-breakpoints) { @content;
 }
 }

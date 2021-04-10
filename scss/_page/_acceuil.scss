@@ -10,20 +10,21 @@
         display: flex;
         justify-content: center;
         align-items: baseline;
-        padding: $pad-container-text;
+        padding: 20px;
         background-color: darken($grey-section, 5%);
 
         &_text {
             text-align: center;
             border: none;
-            max-width: $card-width;
+            max-width: 150px;
             background-color: darken($grey-section, 5%);
             @include text-standard(100);
 
             @include screen-only {
-                // regler la visibilité de la barre de recherhe sous le titre//
-                margin-top: 70px;
+                // for the visibility of the search bar under the logo(header)//
+                margin-top: 60px;
             }
+
 
             &:focus {
                 outline: none;
@@ -40,52 +41,45 @@
     }
 }
 
-// Function //
+// functionnning //
 
 .functioning {
 
     @include space-section;
 
-    //padding-left-right
+    //global padding-left-right
     @include screen-only {
         @include space-section-screen;
     }
 
-
-    @include medium-screen-only {
+    @include tablette-screen-only {
         @include space-section-medium-screen;
     }
 
-
+    //!base style in html/component page
     .container {
         display: flex;
         justify-content: space-between;
-    }
-   
-
-
-           
-    @include screen-only {
-       @include space-section-screen;}
-
-    &_card {
-       
-        background-color: $grey-section;
-       padding-right: $pad-container-text;
-        border-radius: 1.5em;
-        //il faut plus de marge à gauche pour la bulle numerotée
-        margin: $min-general-margin $general-margin $min-general-margin 30px;
-        position: relative;
-
-        @include box-shadow ($grey-shadow);
-     
+        padding: 0;
+        //bigger padding-left for the strech of the numbers 
+        margin: $general-margin $min-general-margin 0 7vw;
 
         @include screen-only {
-            min-width: 25%;
-            display: flex;
-          justify-content: space-between;
-            padding: 0 25px 0 0;
+            //important! removal of unnecessary margins
+            margin: $general-margin 0 0 2vw;
         }
+    }
+
+
+    &_card {
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        background-color: $grey-section;
+        border-radius: 1.5em;
+        position: relative;
+        @include box-shadow ($grey-shadow);
 
         &--color {
             background-color: lighten($first-color, 37%);
@@ -93,10 +87,9 @@
 
         &_text {
             @include text-standard(500);
-            text-overflow: ellipsis;
             overflow: hidden;
-           margin-left: 30px;
-           white-space: nowrap;
+            // size of the card
+            margin: 25px 20px 25px 20px;
         }
 
         &_number {
@@ -110,9 +103,9 @@
         }
 
         &_icone {
-            margin: 0 20px 0 20px;
+            padding-left: 20px;
             color: lighten(black, 40%);
-            font-size: 1.4em;
+            font-size: 1.3em;
 
             &--color {
                 color: $first-color;
@@ -129,18 +122,17 @@
     @include space-section;
     background-color: $grey-section;
 
-    //padding-left
-    @include medium-screen-only {
-      @include space-section-medium-screen;
-  }
+    //global padding-left
+    @include tablette-screen-only {
+        @include space-section-medium-screen;
+    }
 
     @include screen-only {
         @include space-section-screen;
     }
 
-
     &_card {
-       
+
         height: 60vmin;
         object-fit: contain;
         border-radius: 1em;
@@ -161,19 +153,20 @@
 
         @include box-shadow($grey-shadow);
 
-        @include medium-screen-only {
+        @include tablette-screen-only {
             margin: $min-general-margin 1vw $min-general-margin 1vw;
             height: 45vmax;
         }
 
         @include little-screen-only {
-            height: 22vmax;
-            width: 33vmax;
+            height: 23vw;
+            width: 30vw;
         }
+
         @include screen-only {
             height: 20vmax;
-width: 33.3vmax;
-}
+            width: 33.4vw;
+        }
 
         img {
             width: 100%;
@@ -184,22 +177,22 @@ width: 33.3vmax;
         }
     }
 }
-// attention responsive ipad pro 
+
 
 .restaurants_card_footer {
     height: 33%;
+    width: 100%;
     position: absolute;
     bottom: 0;
     background-color: white;
     border-radius: 0 0 1em 1em;
-    width: 100%;
     overflow: hidden;
 
     &_text {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        padding: 1vw $pad-container-text 0 $pad-container-text;
+        padding: 1% 0.5% 0 3%;
         margin: 0;
     }
 
@@ -208,7 +201,7 @@ width: 33.3vmax;
         top: -30%;
         right: -6%;
 
-        @include medium-screen-only {
+        @include tablette-screen-only {
             top: -13%;
             right: 0;
         }
@@ -240,6 +233,7 @@ width: 33.3vmax;
     width: 100%;
 
     opacity: 0.98;
+    //général animation 
     animation: loader 0.01s 2.5s forwards;
 
     display: grid;

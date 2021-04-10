@@ -22,14 +22,12 @@ $general-margin: 5vmin;
 $min-general-margin: 4vmin;
 
 $padding-screen: 13vw;
-$padding-medium-screen: 5vw;
-$padding-little-screen: 8vw;
 
 
 @mixin space-section{
     padding: $pad-top-section 0 $pad-end-section 0;
 }
-//padding-left //revoir les mpadding interieru aussi après
+//padding-section 
 @mixin space-section-screen{
     padding: $pad-top-section $padding-screen $pad-end-section $padding-screen;
 }
@@ -38,17 +36,9 @@ $padding-little-screen: 8vw;
     padding: $pad-top-section $padding-screen $pad-end-section $padding-screen;
 }
 
-@mixin space-section-little-screen{
-    padding: 0 $padding-little-screen  0 $padding-little-screen ;
-}
-
 @mixin box-shadow ($color) {
     box-shadow: 9px 9px 15px -0.5em $color;
 }
-
-// size//
-$card-width: 150px;
-
 
 
 // images url
@@ -78,7 +68,7 @@ $animation-delay: 0.1;
 $delay: 0.5s;
 $duration: 1.2s;
 
-//--modules size--
+//--modules size loader --
 $grid-width:1.2vmax;
 $grid-height: 6vmax;
 
@@ -86,11 +76,12 @@ $final-tilt : (no-tilt: 0deg,
 positive-tilt: 10deg,
 negative-tilt: -10deg);
 
+//une inclinaison différente pour chaque module de la map tilt
 @each $tilt, $deg in $final-tilt {
   @keyframes rotation--#{$tilt} {
     
     0% {
-        transform: rotate(random(240)+deg); //225
+        transform: rotate(random(240)+deg); 
     }
 
     33% {
