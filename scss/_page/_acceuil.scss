@@ -258,6 +258,7 @@
     border-radius: 0.9em;
     background-color: $first-color;
     box-shadow: -1px -1px 5px 0.01em lighten(grey, 25%);
+    will-change: transform;
 }
 
 .pied-1 {
