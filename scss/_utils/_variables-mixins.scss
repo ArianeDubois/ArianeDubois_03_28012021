@@ -102,5 +102,6 @@ $deg in $final-tilt {
 @keyframes loader {
     100% {
         opacity: 0;
+        transform: translateY(-10000px);
     }
 }
