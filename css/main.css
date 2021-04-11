@@ -32,13 +32,13 @@
 
 @keyframes rotation--no-tilt {
   0% {
-    transform: rotate(78deg);
+    transform: rotate(166deg);
   }
   33% {
-    transform: rotate(167deg);
+    transform: rotate(115deg);
   }
   66% {
-    transform: rotate(7deg);
+    transform: rotate(21deg);
   }
   100% {
     transform: rotate(0deg);
@@ -46,13 +46,13 @@
 }
 @keyframes rotation--positive-tilt {
   0% {
-    transform: rotate(193deg);
+    transform: rotate(56deg);
   }
   33% {
-    transform: rotate(30deg);
+    transform: rotate(99deg);
   }
   66% {
-    transform: rotate(62deg);
+    transform: rotate(54deg);
   }
   100% {
     transform: rotate(10deg);
@@ -60,13 +60,13 @@
 }
 @keyframes rotation--negative-tilt {
   0% {
-    transform: rotate(15deg);
+    transform: rotate(209deg);
   }
   33% {
-    transform: rotate(150deg);
+    transform: rotate(145deg);
   }
   66% {
-    transform: rotate(5deg);
+    transform: rotate(76deg);
   }
   100% {
     transform: rotate(-10deg);
@@ -75,7 +75,6 @@
 @keyframes loader {
   100% {
     opacity: 0;
-    z-index: -5;
   }
 }
 body {
