@@ -32,13 +32,13 @@
 
 @keyframes rotation--no-tilt {
   0% {
-    transform: rotate(110deg);
+    transform: rotate(78deg);
   }
   33% {
-    transform: rotate(168deg);
+    transform: rotate(167deg);
   }
   66% {
-    transform: rotate(47deg);
+    transform: rotate(7deg);
   }
   100% {
     transform: rotate(0deg);
@@ -46,13 +46,13 @@
 }
 @keyframes rotation--positive-tilt {
   0% {
-    transform: rotate(209deg);
+    transform: rotate(193deg);
   }
   33% {
-    transform: rotate(15deg);
+    transform: rotate(30deg);
   }
   66% {
-    transform: rotate(65deg);
+    transform: rotate(62deg);
   }
   100% {
     transform: rotate(10deg);
@@ -60,13 +60,13 @@
 }
 @keyframes rotation--negative-tilt {
   0% {
-    transform: rotate(160deg);
+    transform: rotate(15deg);
   }
   33% {
-    transform: rotate(74deg);
+    transform: rotate(150deg);
   }
   66% {
-    transform: rotate(39deg);
+    transform: rotate(5deg);
   }
   100% {
     transform: rotate(-10deg);
@@ -349,13 +349,13 @@ a {
   box-shadow: 9px 9px 15px -0.5em #9e9d9d;
 }
 .restaurants_card_nouveau {
+  background-color: #99E2D0;
   color: #32b091;
   box-shadow: 6px 6px 8px -0.5em black;
   padding: 2%;
   position: absolute;
   top: 3%;
   right: 2%;
-  background-color: red;
 }
 @media (min-width: 599px) {
   .restaurants_card {
@@ -380,7 +380,7 @@ a {
   border-radius: 1em;
   height: auto;
   object-fit: cover;
-  object-position: 0 -5vw;
+  object-position: 0 -4vw;
 }
 
 .restaurants_card_footer {
