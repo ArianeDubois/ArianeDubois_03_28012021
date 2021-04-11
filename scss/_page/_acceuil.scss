@@ -142,20 +142,22 @@
         @include box-shadow($grey-shadow);
 
         &_nouveau {
-            background-color: $thurd-color;
+            //background-color: $thurd-color;
             color: darken($thurd-color, 30%);
             box-shadow: 6px 6px 8px -0.5em black;
             padding: 2%;
             position: absolute;
             top: 3%;
             right: 2%;
+            background-color: red;
         }
 
         @include box-shadow($grey-shadow);
 
         @include tablette-screen-only {
             margin: $min-general-margin 1vw $min-general-margin 1vw;
-            height: 45vmax;
+            height: 40vmax;
+        
         }
 
         @include little-screen-only {
